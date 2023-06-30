@@ -1,0 +1,8 @@
+{
+    "Dashboard": true,
+    "Blog": true,
+    "Profile": true,
+    "Settings": true,
+    "Roles": true,
+    "Testimonial": true
+}
