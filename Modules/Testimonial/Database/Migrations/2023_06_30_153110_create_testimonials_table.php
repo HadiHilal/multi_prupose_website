@@ -19,7 +19,7 @@ return new class extends Migration
             $table->json('position');
             $table->json('comment');
             $table->tinyInteger('publish')->default(1);
-            $table->string('link')->default('#');
+            $table->string('link')->nullable();
             $table->string('img')->default('imgs/blank.png');
             $table->timestamps();
         });

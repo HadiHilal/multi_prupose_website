@@ -51,7 +51,7 @@
                             <div class="row mb-8">
                                 <!--begin::Col-->
                                 <div class="col-xl-3">
-                                    <div class="fs-6 fw-bold mt-2 mb-3">{{__('admin.WebsiteName')}}</div>
+                                    <div class="fs-6 fw-bold mt-2 mb-3"><i class="bi bi-translate text-primary mx-1 "></i>{{__('admin.WebsiteName')}}</div>
                                 </div>
                                 <!--end::Col-->
                                 <!--begin::Col-->
@@ -63,7 +63,7 @@
                               <div class="row mb-8">
                             <!--begin::Col-->
                             <div class="col-xl-3">
-                                <div class="fs-6 fw-bold mt-2 mb-3">{{__('admin.WebsiteDescription')}}</div>
+                                <div class="fs-6 fw-bold mt-2 mb-3"><i class="bi bi-translate text-primary mx-1 "></i> {{__('admin.WebsiteDescription')}}</div>
                             </div>
                             <!--end::Col-->
                             <!--begin::Col-->
@@ -75,7 +75,7 @@
                        <div class="row mb-8">
                             <!--begin::Col-->
                             <div class="col-xl-3">
-                                <div class="fs-6 fw-bold mt-2 mb-3">{{__('admin.WebsiteKeywords')}}</div>
+                                <div class="fs-6 fw-bold mt-2 mb-3"><i class="bi bi-translate text-primary mx-1 "></i>{{__('admin.WebsiteKeywords')}}</div>
                             </div>
                             <!--end::Col-->
                             <!--begin::Col-->
@@ -87,7 +87,7 @@
                        <div class="row mb-8">
                             <!--begin::Col-->
                             <div class="col-xl-3">
-                                <div class="fs-6 fw-bold mt-2 mb-3">{{__('admin.AboutUs')}}</div>
+                                <div class="fs-6 fw-bold mt-2 mb-3"><i class="bi bi-translate text-primary mx-1 "></i> {{__('admin.AboutUs')}}</div>
                             </div>
                             <!--end::Col-->
                             <!--begin::Col-->
@@ -99,7 +99,7 @@
                        <div class="row mb-8">
                             <!--begin::Col-->
                             <div class="col-xl-3">
-                                <div class="fs-6 fw-bold mt-2 mb-3">{{__('admin.WebsiteMainTitle')}}</div>
+                                <div class="fs-6 fw-bold mt-2 mb-3"><i class="bi bi-translate text-primary mx-1 "></i>{{__('admin.WebsiteMainTitle')}}</div>
                             </div>
                             <!--end::Col-->
                             <!--begin::Col-->
@@ -111,7 +111,7 @@
                          <div class="row mb-8">
                             <!--begin::Col-->
                             <div class="col-xl-3">
-                                <div class="fs-6 fw-bold mt-2 mb-3">{{__('admin.WebsiteSubTitle')}}</div>
+                                <div class="fs-6 fw-bold mt-2 mb-3"><i class="bi bi-translate text-primary mx-1 "></i>{{__('admin.WebsiteSubTitle')}}</div>
                             </div>
                             <!--end::Col-->
                             <!--begin::Col-->

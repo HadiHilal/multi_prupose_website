@@ -3,6 +3,9 @@
     "Blog": true,
     "Profile": true,
     "Settings": true,
-    "Roles": true,
-    "Testimonial": true
+    "Testimonial": true,
+    "User": true,
+    "Role": true,
+    "Subscriber": true,
+    "Category": true
 }

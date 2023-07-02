@@ -89,7 +89,8 @@
                                 <input type="text" name="email" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" value="{{old('email', $user->email)}}"  autocomplete="email">
                             <div class="fv-plugins-message-container invalid-feedback">
                                  <x-input-error class="mt-2" :messages="$errors->get('email')" />
-                            </div></div>
+                            </div>
+                            </div>
                             <!--end::Col-->
                         </div>
                         <!--end::Row-->

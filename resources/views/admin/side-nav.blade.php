@@ -66,6 +66,30 @@
 								</div>
                                 @endcan
 
+
+                                <div data-kt-menu-trigger="click" class="menu-item menu-accordion {{isset($index_blogs)  ||isset($index_categories)  ? 'show hover' : ''}}">
+									<span class="menu-link">
+										<span class="menu-icon">
+											<!--begin::Svg Icon | path: icons/duotune/communication/com013.svg-->
+									        <i class="bi bi-postcard"></i>
+											<!--end::Svg Icon-->
+										</span>
+										<span class="menu-title">{{__('admin.Blogs')}}</span>
+										<span class="menu-arrow"></span>
+									</span>
+									<div class="menu-sub menu-sub-accordion menu-active-bg {{isset($index_categories) ? 'show' : ''}}">
+										<div class="menu-item">
+											<a class="menu-link {{isset($index_categories) ? 'active' : ''}}" href="{{route('admin.categories.index')}}">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">{{__('admin.Categories')}}</span>
+											</a>
+										</div>
+									</div>
+								</div>
+
+
                                 @can('view testimonials')
 										<div class="menu-item">
 											<a class="menu-link {{isset($index_testimonials) ? 'active' : ''}}" href="{{route('admin.testimonials.index')}}">
@@ -76,6 +100,31 @@
 											</a>
 										</div>
                                 @endcan
+
+
+                                @can('view subscribers')
+										<div class="menu-item">
+											<a class="menu-link {{isset($index_subscribers) ? 'active' : ''}}" href="{{route('admin.subscribers.index')}}">
+                                                <span class="menu-icon">
+                                                   <i class="bi bi-envelope-open-heart"></i>
+                                                </span>
+												<span class="menu-title">{{__('admin.Subscribers')}}</span>
+											</a>
+										</div>
+                                @endcan
+
+
+                                @can('view users')
+										<div class="menu-item">
+											<a class="menu-link {{isset($index_users) ? 'active' : ''}}" href="{{route('admin.users.index')}}">
+                                                <span class="menu-icon">
+                                                  <i class="bi bi-people"></i>
+                                                </span>
+												<span class="menu-title">{{__('admin.Users')}}</span>
+											</a>
+										</div>
+                                @endcan
+
 
 								<div class="menu-item">
 									<div class="menu-content">
