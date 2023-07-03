@@ -71,12 +71,13 @@
 									<span class="menu-link">
 										<span class="menu-icon">
 											<!--begin::Svg Icon | path: icons/duotune/communication/com013.svg-->
-									        <i class="bi bi-postcard"></i>
+									      <i class="bi bi-window-stack"></i>
 											<!--end::Svg Icon-->
 										</span>
 										<span class="menu-title">{{__('admin.Blogs')}}</span>
 										<span class="menu-arrow"></span>
 									</span>
+                                    @can('view categories')
 									<div class="menu-sub menu-sub-accordion menu-active-bg {{isset($index_categories) ? 'show' : ''}}">
 										<div class="menu-item">
 											<a class="menu-link {{isset($index_categories) ? 'active' : ''}}" href="{{route('admin.categories.index')}}">
@@ -87,6 +88,21 @@
 											</a>
 										</div>
 									</div>
+                                    @endcan
+
+                                    @can('view blogs')
+									<div class="menu-sub menu-sub-accordion menu-active-bg {{isset($index_blogs) ? 'show' : ''}}">
+										<div class="menu-item">
+											<a class="menu-link {{isset($index_blogs) ? 'active' : ''}}" href="{{route('admin.blogs.index')}}">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+												<span class="menu-title">{{__('admin.Blogs')}}</span>
+											</a>
+										</div>
+									</div>
+                                    @endcan
+
 								</div>
 
 

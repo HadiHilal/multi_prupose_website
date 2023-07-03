@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'AdminPanel' => 'Admin Panel' ,
     'Language'   => 'Language' ,
     'AccountSettings' => 'Account Settings' ,
@@ -104,7 +103,19 @@ return [
     'SwitchToAdmin' => 'Switch To Admin',
     'SwitchToUser' => 'Switch To User',
     'Categories' => 'Categories',
+    'Category' => 'Category',
     'Blogs' => 'Blogs',
     'AddNewCategory' => 'Add New Category',
-     'EditCategory' => 'Edit Category',
+    'EditCategory' => 'Edit Category',
+    'QuickLinks' => 'Quick Links',
+    'AddNewBlog' => 'Add New Blog',
+    'EditBlog' => 'Edit Blog',
+    'BlogLink' => 'Blog Link',
+    'TheSlugShouldBeEnglish' => 'The Slug Should Be English Capitals',
+    'BlogTitle' => 'Blog Title',
+    'BlogImg' => 'Blog Image',
+    'BlogIntro' => 'Blog Intro',
+    'BlogKeywords' => 'Blog Keywords',
+    'Content' => 'Content',
+    'Featured' => 'Featured'
     ];

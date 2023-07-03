@@ -27,7 +27,9 @@ Author: Hadi Hilal
         @else
             	<link href="/admin/css/style.bundle.css" rel="stylesheet" type="text/css" />
         @endif
-
+        <style>
+           #kt_aside {font-size: 14px!important;}
+        </style>
         @yield('css')
 	</head>
 	<!--end::Head-->
@@ -43,7 +45,7 @@ Author: Hadi Hilal
 					<!--begin::Brand-->
 					<div class="aside-logo flex-column-auto" id="kt_aside_logo">
 						<!--begin::Logo-->
-						<a href="../../demo1/dist/index.html">
+						<a href="#">
 							<img alt="Logo" src="/admin/media/logos/logo-1-dark.svg" class="h-25px logo" />
 						</a>
 						<!--end::Logo-->
@@ -91,7 +93,7 @@ Author: Hadi Hilal
 							<!--end::Aside mobile toggle-->
 							<!--begin::Mobile logo-->
 							<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
-								<a href="../../demo1/dist/index.html" class="d-lg-none">
+								<a href="#" class="d-lg-none">
 									<img alt="Logo" src="/admin/media/logos/logo-2.svg" class="h-30px" />
 								</a>
 							</div>
@@ -105,7 +107,7 @@ Author: Hadi Hilal
 										<!--begin::Menu-->
 										<div class="menu menu-lg-rounded menu-column menu-lg-row menu-state-bg menu-title-gray-700 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-400 fw-bold my-5 my-lg-0 align-items-stretch" id="#kt_header_menu" data-kt-menu="true">
 											<div class="menu-item me-lg-1">
-												<a class="menu-link active py-3" href="../../demo1/dist/index.html">
+												<a class="menu-link active py-3" href="#">
 													<span class="menu-title">Dashboard</span>
 												</a>
 											</div>
@@ -120,24 +122,6 @@ Author: Hadi Hilal
 									<!--begin::Toolbar wrapper-->
 									<div class="d-flex align-items-stretch flex-shrink-0">
 
-										<!--begin::Chat-->
-										<div class="d-flex align-items-center ms-1 ms-lg-3">
-											<!--begin::Menu wrapper-->
-											<div class="btn btn-icon btn-active-light-primary position-relative w-30px h-30px w-md-40px h-md-40px" id="kt_drawer_chat_toggle">
-												<!--begin::Svg Icon | path: icons/duotune/communication/com012.svg-->
-												<span class="svg-icon svg-icon-1">
-													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-														<path opacity="0.3" d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z" fill="black" />
-														<rect x="6" y="12" width="7" height="2" rx="1" fill="black" />
-														<rect x="6" y="7" width="12" height="2" rx="1" fill="black" />
-													</svg>
-												</span>
-												<!--end::Svg Icon-->
-												<span class="bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle top-0 start-50 animation-blink"></span>
-											</div>
-											<!--end::Menu wrapper-->
-										</div>
-										<!--end::Chat-->
 										<!--begin::Quick links-->
 										<div class="d-flex align-items-center ms-1 ms-lg-3">
 											<!--begin::Menu wrapper-->
@@ -156,20 +140,18 @@ Author: Hadi Hilal
 											<!--begin::Menu-->
 											<div class="menu menu-sub menu-sub-dropdown menu-column w-250px w-lg-325px" data-kt-menu="true">
 												<!--begin::Heading-->
-												<div class="d-flex flex-column flex-center bgi-no-repeat rounded-top px-9 py-10" style="background-image:url('/admin/media/misc/pattern-1.jpg')">
+												<div class="d-flex flex-column flex-center bgi-no-repeat rounded-top px-9 py-7" style="background-image:url('/admin/media/misc/pattern-1.jpg')">
 													<!--begin::Title-->
-													<h3 class="text-white fw-bold mb-3">Quick Links</h3>
+													<h3 class="text-gray-800 fw-bold mb-1">{{__('admin.QuickLinks')}}</h3>
 													<!--end::Title-->
-													<!--begin::Status-->
-													<span class="badge bg-primary py-2 px-3">25 pending tasks</span>
-													<!--end::Status-->
+
 												</div>
 												<!--end::Heading-->
 												<!--begin:Nav-->
 												<div class="row g-0">
 													<!--begin:Item-->
 													<div class="col-6">
-														<a href="../../demo1/dist/pages/projects/budget.html" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-end border-bottom">
+														<a href="{{route('admin.blogs.index')}}" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-end border-bottom">
 															<!--begin::Svg Icon | path: icons/duotune/finance/fin009.svg-->
 															<span class="svg-icon svg-icon-3x svg-icon-primary mb-2">
 																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -178,14 +160,14 @@ Author: Hadi Hilal
 																</svg>
 															</span>
 															<!--end::Svg Icon-->
-															<span class="fs-5 fw-bold text-gray-800 mb-0">Accounting</span>
-															<span class="fs-7 text-gray-400">eCommerce</span>
+															<span class="fs-5 fw-bold text-gray-800 mb-0">{{__('admin.Blogs')}}</span>
+
 														</a>
 													</div>
 													<!--end:Item-->
 													<!--begin:Item-->
 													<div class="col-6">
-														<a href="../../demo1/dist/pages/projects/settings.html" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-bottom">
+														<a href="{{route('admin.roles.index')}}" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-bottom">
 															<!--begin::Svg Icon | path: icons/duotune/communication/com010.svg-->
 															<span class="svg-icon svg-icon-3x svg-icon-primary mb-2">
 																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -194,14 +176,14 @@ Author: Hadi Hilal
 																</svg>
 															</span>
 															<!--end::Svg Icon-->
-															<span class="fs-5 fw-bold text-gray-800 mb-0">Administration</span>
-															<span class="fs-7 text-gray-400">Console</span>
+															<span class="fs-5 fw-bold text-gray-800 mb-0">{{__('admin.Roles')}}</span>
+
 														</a>
 													</div>
 													<!--end:Item-->
 													<!--begin:Item-->
 													<div class="col-6">
-														<a href="../../demo1/dist/pages/projects/list.html" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-end">
+														<a href="{{route('admin.users.index')}}" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-end">
 															<!--begin::Svg Icon | path: icons/duotune/abstract/abs042.svg-->
 															<span class="svg-icon svg-icon-3x svg-icon-primary mb-2">
 																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -210,14 +192,14 @@ Author: Hadi Hilal
 																</svg>
 															</span>
 															<!--end::Svg Icon-->
-															<span class="fs-5 fw-bold text-gray-800 mb-0">Projects</span>
-															<span class="fs-7 text-gray-400">Pending Tasks</span>
+															<span class="fs-5 fw-bold text-gray-800 mb-0">{{__('admin.Users')}}</span>
+
 														</a>
 													</div>
 													<!--end:Item-->
 													<!--begin:Item-->
 													<div class="col-6">
-														<a href="../../demo1/dist/pages/projects/users.html" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light">
+														<a href="{{route('admin.settings.index')}}" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light">
 															<!--begin::Svg Icon | path: icons/duotune/finance/fin006.svg-->
 															<span class="svg-icon svg-icon-3x svg-icon-primary mb-2">
 																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -226,26 +208,14 @@ Author: Hadi Hilal
 																</svg>
 															</span>
 															<!--end::Svg Icon-->
-															<span class="fs-5 fw-bold text-gray-800 mb-0">Customers</span>
-															<span class="fs-7 text-gray-400">Latest cases</span>
+															<span class="fs-5 fw-bold text-gray-800 mb-0">{{__('admin.Settings')}}</span>
+
 														</a>
 													</div>
 													<!--end:Item-->
 												</div>
 												<!--end:Nav-->
-												<!--begin::View more-->
-												<div class="py-2 text-center border-top">
-													<a href="../../demo1/dist/pages/profile/activity.html" class="btn btn-color-gray-600 btn-active-color-primary">View All
-													<!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
-													<span class="svg-icon svg-icon-5">
-														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-															<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="black" />
-															<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="black" />
-														</svg>
-													</span>
-													<!--end::Svg Icon--></a>
-												</div>
-												<!--end::View more-->
+
 											</div>
 											<!--end::Menu-->
 											<!--end::Menu wrapper-->
@@ -257,7 +227,7 @@ Author: Hadi Hilal
 											<div class="cursor-pointer symbol symbol-30px symbol-md-40px" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
 
                                                 <div class="symbol symbol-circle symbol-50px overflow-hidden me-3">
-                                                            <div class="symbol-label fs-3 bg-light-primary text-primary ">      {{ strtoupper(substr(auth()->user()->name, 0, 2)) }} </div>
+                                                            <div class="symbol-label fs-3 bg-light-primary text-primary">{{ strtoupper(substr(auth()->user()->name, 0, 2)) }} </div>
                                                     </div>
 
 											</div>
@@ -269,7 +239,7 @@ Author: Hadi Hilal
 														<!--begin::Avatar-->
 														<div class="symbol symbol-50px me-3">
                                                             <div class="symbol symbol-circle symbol-50px overflow-hidden me-3">
-                                                               <div class="symbol-label fs-3 bg-light-primary text-primary ">      {{ strtoupper(substr(auth()->user()->name, 0, 2)) }} </div>
+                                                               <div class="symbol-label fs-3 bg-light-primary text-primary "> {{ strtoupper(substr(auth()->user()->name, 0, 2)) }} </div>
                                                             </div>
 														</div>
 														<!--end::Avatar-->
