@@ -38,9 +38,9 @@ class AdminController extends Controller {
         $users = User::whereDoesntHave('roles')
             ->where('type', 'admin')
             ->get();
-
+        $index_roles = 'show';
         $permissions = Permission::all();
-        return view('role::admin.view' , compact('role' ,'users' , 'permissions'));
+        return view('role::admin.view' , compact('role' ,'users' , 'permissions' , 'index_roles'));
     }
 
     public function update(Request $request){

@@ -7,7 +7,9 @@ use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Modules\Blog\Entities\Blog;
+use Modules\Blog\Notifications\NotifyUsersOfNewBlog;
 use Modules\Category\Entities\Category;
+use Modules\Subscriber\Entities\Subscriber;
 
 class AdminController extends Controller
 {
@@ -18,7 +20,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::all();
+        $blogs = Blog::with('category')->get();
         $index_blogs = 'show';
         return view('blog::admin.index' , compact('blogs' , 'index_blogs'));
     }
@@ -132,6 +134,13 @@ class AdminController extends Controller
         $blog->publish = $request->has('publish') ? 1 : 0;
         $blog->featured = $request->has('featured') ? 1 : 0;
         $blog->save();
+        if ($blog->publish){
+            $subscripers = Subscriber::all();
+            foreach ($subscripers as $subscriper){
+                $subscriper->notify(new NotifyUsersOfNewBlog($blog->title , $blog->intro , 'www.google.com'));
+            }
+        }
+
         session()->flash('alert', ['class' => 'success', 'msg' => __('admin.TheOpreationDoneSuccessFully')]);
         return redirect()->to(route('admin.blogs.index'));
     }

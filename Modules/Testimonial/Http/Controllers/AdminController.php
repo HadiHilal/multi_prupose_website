@@ -28,7 +28,8 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('testimonial::admin.create');
+        $index_testimonials = 'show';
+        return view('testimonial::admin.create' ,compact('index_testimonials'));
     }
 
     public function store(Request $request)
@@ -71,7 +72,8 @@ class AdminController extends Controller
     public function edit($id)
     {
         $model = Testimonial::findOrFail($id);
-        return view('testimonial::admin.edit' , compact('model'));
+         $index_testimonials = 'show';
+        return view('testimonial::admin.edit' , compact('model' ,'index_testimonials'));
     }
 
     public function update(Request $request)

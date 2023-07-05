@@ -7,5 +7,7 @@
     "User": true,
     "Role": true,
     "Subscriber": true,
-    "Category": true
+    "Category": true,
+    "Plan": true,
+    "Contact": true
 }

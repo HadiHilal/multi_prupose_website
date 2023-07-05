@@ -250,7 +250,7 @@
                         <div class="d-flex flex-stack flex-grow-1">
                             <!--begin::Content-->
                             <div class="fw-bold">
-                                <h4 class="text-gray-900 fw-bolder">{{__('admin.YouAreDeactivatingYourAccount')}}t</h4>
+                                <h4 class="text-gray-900 fw-bolder">{{__('admin.YouAreDeactivatingYourAccount')}}</h4>
                                 <div class="fs-6 text-gray-700">
                                     {{__('admin.ForExtraSecurity')}}
 

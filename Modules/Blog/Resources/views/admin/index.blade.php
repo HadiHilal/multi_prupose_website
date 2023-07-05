@@ -51,7 +51,7 @@
                         </svg>
                     </span>
                     <!--end::Svg Icon-->
-                    <input type="text" data-kt-user-table-filter="search" class="form-control form-control-solid w-250px ps-14" placeholder="Search Blog" />
+                    <input type="text" data-kt-user-table-filter="search"  id="search" class="form-control form-control-solid w-250px ps-14" placeholder="{{__('admin.SearchInBlog')}}" />
                 </div>
                 <!--end::Search-->
             </div>
@@ -90,6 +90,7 @@
                         <th></th>
                         <th class="min-w-125px">{{__('admin.BlogImg')}}</th>
                         <th class="min-w-125px">{{__('admin.BlogTitle')}}</th>
+                         <th class="min-w-125px">{{__('admin.Category')}}</th>
                         <th class="min-w-125px">{{__('admin.Featured')}}</th>
                         <th class="min-w-125px">{{__('admin.Published')}}</th>
                         <th class="min-w-125px">{{__('admin.CreatedDate')}}</th>
@@ -105,20 +106,23 @@
                    @foreach($blogs as $key => $blog)
                       <tr>
                           <td> {{$key + 1 }}</td>
-                        <!--begin::User=-->
+
                         <td class="d-flex align-items-center">
-                            <!--begin:: Avatar -->
+
                             <a target="_blank" href="{{asset('storage/' . $blog->img)}}">
-                                     <img height="75" src="{{asset('storage/' . $blog->img)}}" alt="blog img">
+                                     <img height="60" src="{{asset('storage/' . $blog->img)}}" alt="blog img">
                             </a>
                         </td>
-                        <!--end::User=-->
-                        <!--begin::Role=-->
-                        <td>
-                          {{$blog->title}}
+                          <td>
+                              <a href="#">
+                                   {{$blog->title}} <i class="bi bi-arrow-up-right-square mx-1"></i>
+                              </a>
+                          </td>
+
+                                         <td>
+                          {{$blog->category->name}}
                         </td>
-                        <!--end::Role=-->
-                        <!--begin::Last login=-->
+
                         <td>
                             <div class="badge badge-light fw-bolder">
                                 @if($blog->featured)
@@ -145,7 +149,7 @@
                         </td>
                         <!--end::Two step=-->
                         <!--begin::Joined-->
-                        <td>{{$blog->created_at}}</td>
+                        <td>{{$blog->created_at->diffForHumans()}}</td>
                         <!--begin::Joined-->
                         <!--begin::Action=-->
 
@@ -193,12 +197,17 @@
 @endsection
 
 @section('js')
-    <script src="/admin/plugins/custom/datatables/datatables.bundle.js"></script>
-    <script>
-        $(document).ready(function() {
-          $('#kt_table_blogs').DataTable({
-            "paging": true,
-          });
-          });
-    </script>
+<script src="/admin/plugins/custom/datatables/datatables.bundle.js"></script>
+<script>
+  $(document).ready(function() {
+    var table = $('#kt_table_blogs').DataTable({
+      "paging": true
+    });
+
+    $('#search').on('keyup', function() {
+      table.search(this.value).draw();
+    });
+  });
+</script>
+
 @endsection

@@ -24,12 +24,26 @@ Author: Hadi Hilal
 		<!--end::Global Stylesheets Bundle-->
         @if(LaravelLocalization::getCurrentLocaleDirection()  === 'rtl')
             <link href="/admin/css/style.bundle.rtl.css" rel="stylesheet" type="text/css" />
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+            <style>
+                html , body, .modal .modal-header h1, .modal .modal-header .h1, .modal .modal-header h2,
+                .modal .modal-header .h2, .modal .modal-header h3, .modal .modal-header .h3, .modal .modal-header h4,
+                .modal .modal-header .h4, .modal .modal-header h5, .modal .modal-header .h5, .modal .modal-header h6, .modal .modal-header .h6
+                {
+                    font-family: 'Tajawal', sans-serif !important;
+                    line-height: 1.8;
+                }
+            </style>
         @else
-            	<link href="/admin/css/style.bundle.css" rel="stylesheet" type="text/css" />
+            <link href="/admin/css/style.bundle.css" rel="stylesheet" type="text/css" />
+
         @endif
         <style>
            #kt_aside {font-size: 14px!important;}
         </style>
+
         @yield('css')
 	</head>
 	<!--end::Head-->
@@ -45,8 +59,12 @@ Author: Hadi Hilal
 					<!--begin::Brand-->
 					<div class="aside-logo flex-column-auto" id="kt_aside_logo">
 						<!--begin::Logo-->
-						<a href="#">
-							<img alt="Logo" src="/admin/media/logos/logo-1-dark.svg" class="h-25px logo" />
+                        @php
+                        $settings = \Modules\Settings\Entities\Settings::pluck('value' ,'key');
+
+                        @endphp
+						<a href="{{asset('storage/'. $settings->get('white_logo')) }}">
+							<img alt="Logo" src="{{asset('storage/'. $settings->get('white_logo')) }}" class="h-30px logo" />
 						</a>
 						<!--end::Logo-->
 						<!--begin::Aside toggler-->
@@ -107,8 +125,8 @@ Author: Hadi Hilal
 										<!--begin::Menu-->
 										<div class="menu menu-lg-rounded menu-column menu-lg-row menu-state-bg menu-title-gray-700 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-400 fw-bold my-5 my-lg-0 align-items-stretch" id="#kt_header_menu" data-kt-menu="true">
 											<div class="menu-item me-lg-1">
-												<a class="menu-link active py-3" href="#">
-													<span class="menu-title">Dashboard</span>
+												<a class="menu-link active py-3" href="{{url('clear_cache')}}">
+													<span class="menu-title">Clear Cache</span>
 												</a>
 											</div>
 										</div>
@@ -259,7 +277,7 @@ Author: Hadi Hilal
 												<!--begin::Menu item-->
 												<div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="left-start">
 													<a href="#" class="menu-link px-5">
-														<span class="menu-title position-relative"> {{__('admin.Language')}}
+														<span class="menu-title position-relative"> {{__('admin.Languages')}}
 														<span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">{{LaravelLocalization::getCurrentLocaleName()}}
 														<img class="w-15px h-15px rounded-1 ms-2" src="/admin/media/flags/{{ LaravelLocalization::getCurrentLocale()  === 'ar' ? 'saudi-arabia.svg':'united-states.svg'}} " alt="" /></span></span>
 													</a>
