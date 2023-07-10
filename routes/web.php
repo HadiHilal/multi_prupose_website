@@ -15,13 +15,15 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 
 Route::get('/clear_cache', function () {
     \Illuminate\Support\Facades\Artisan::call('cache:clear');
+       session()->flash('alert', ['class' => 'success', 'msg' => __('admin.TheOpreationDoneSuccessFully')]);
+        return back();
+});
+
+Route::get('/storage_link', function () {
+    \Illuminate\Support\Facades\Artisan::call('storage:link');
        session()->flash('alert', ['class' => 'success', 'msg' => __('admin.TheOpreationDoneSuccessFully')]);
         return back();
 });

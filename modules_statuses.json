@@ -9,5 +9,6 @@
     "Subscriber": true,
     "Category": true,
     "Plan": true,
-    "Contact": true
+    "Contact": true,
+    "Site": true
 }

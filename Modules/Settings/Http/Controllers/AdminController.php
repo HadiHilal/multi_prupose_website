@@ -6,6 +6,7 @@ namespace Modules\Settings\Http\Controllers;
 use App\Traits\ImgTrait;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Cache;
 use Modules\Settings\Entities\Seo;
 use Modules\Settings\Entities\Settings;
 
@@ -39,6 +40,7 @@ class AdminController extends Controller {
          Settings::set($key , $value);
        }
 
+        Cache::forget('settings');
         session()->flash('alert', ['class' => 'success', 'msg' => __('admin.TheOpreationDoneSuccessFully')]);
         return redirect()->back();
     }
@@ -56,6 +58,7 @@ class AdminController extends Controller {
          Seo::set($key , $value ,$lang);
        }
 
+         Cache::forget('seo');
         session()->flash('alert', ['class' => 'success', 'msg' => __('admin.TheOpreationDoneSuccessFully')]);
         return redirect()->back();
     }

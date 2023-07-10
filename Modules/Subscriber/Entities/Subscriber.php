@@ -12,7 +12,7 @@ class Subscriber extends Model
     use Notifiable;
     use HasFactory;
 
-    protected $fillable = [];
+    protected $fillable = ['email'];
 
     protected static function newFactory()
     {

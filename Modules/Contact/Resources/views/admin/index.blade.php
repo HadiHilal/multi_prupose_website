@@ -98,17 +98,17 @@
                         </td>
 
                         <td>
-
+                            {{ $item->country }}
                         </td>
                         <td>
                             {{$item->subject}}
                         </td>
 
                         <td>
-                            <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#kt_modal_1">
+                            <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#kt_modal_{{$key}}">
                                 {{__('admin.Show')}}
                             </button>
-                            <div class="modal fade" tabindex="-1" id="kt_modal_1">
+                            <div class="modal fade" tabindex="-1" id="kt_modal_{{$key}}">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">

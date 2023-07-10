@@ -216,7 +216,7 @@
             $('#addFeatureBtn').on('click' ,function() {
                 var clonedContainer = featureContainer.clone();
                 clonedContainer.find('input').val('');
-                clonedContainer.find('input[type="checkbox"]').prop('checked', true);
+                clonedContainer.find('input[type="checkbox"]').prop('checked', true).removeAttr('value');
                 $('#repeaterContainer').append(clonedContainer);
             });
                 $(document).on('click', '.delete-feature-btn', function() {

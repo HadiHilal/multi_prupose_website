@@ -6,6 +6,7 @@ use App\Traits\ImgTrait;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Cache;
 use Modules\Testimonial\Entities\Testimonial;
 
 class AdminController extends Controller
@@ -59,6 +60,7 @@ class AdminController extends Controller
         $testimonial->link = $request->link;
         $testimonial->publish = $request->has('publish') ? 1 : 0;
         $testimonial->save();
+         Cache::forget('testimonials');
         session()->flash('alert', ['class' => 'success', 'msg' => __('admin.TheOpreationDoneSuccessFully')]);
         return redirect()->to(route('admin.testimonials.index'));
     }
@@ -105,6 +107,7 @@ class AdminController extends Controller
         $testimonial->link = $request->link;
         $testimonial->publish = $request->has('publish') ? 1 : 0;
         $testimonial->save();
+        Cache::forget('testimonials');
         session()->flash('alert', ['class' => 'success', 'msg' => __('admin.TheOpreationDoneSuccessFully')]);
         return redirect()->to(route('admin.testimonials.index'));
     }
@@ -115,6 +118,7 @@ class AdminController extends Controller
         $testimonial = Testimonial::findOrFail($id);
         $this->deleteImg($testimonial->img);
         $testimonial->delete();
+        Cache::forget('testimonials');
         session()->flash('alert', ['class' => 'success', 'msg' => __('admin.TheOpreationDoneSuccessFully')]);
         return redirect()->to(route('admin.testimonials.index'));
     }

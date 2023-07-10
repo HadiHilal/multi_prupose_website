@@ -6,6 +6,7 @@ use App\Traits\ImgTrait;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Cache;
 use Modules\Plan\Entities\Plan;
 use Modules\Plan\Entities\PlanFeature;
 
@@ -52,6 +53,7 @@ class AdminController extends Controller
                 session()->flash('alert', ['class' => 'danger', 'msg' => __('admin.AnErrorOccurred')]);
             }
         }
+
         $plan = new Plan();
         $plan->img = $path;
         $plan->name = $request->name;
@@ -71,6 +73,7 @@ class AdminController extends Controller
             }
                 $plan_feature->save();
         }
+        Cache::forget('plans');
         session()->flash('alert', ['class' => 'success', 'msg' => __('admin.TheOpreationDoneSuccessFully')]);
         return redirect()->to(route('admin.plans.index'));
 
@@ -140,6 +143,7 @@ class AdminController extends Controller
 
             $plan_feature->save();
         }
+        Cache::forget('plans');
         session()->flash('alert', ['class' => 'success', 'msg' => __('admin.TheOpreationDoneSuccessFully')]);
         return redirect()->to(route('admin.plans.index'));
 
@@ -152,11 +156,13 @@ class AdminController extends Controller
        $plan->features()->delete();
        $this->deleteImg($plan->img);
        $plan->delete();
-        session()->flash('alert', ['class' => 'success', 'msg' => __('admin.TheOpreationDoneSuccessFully')]);
+       Cache::forget('plans');
+       session()->flash('alert', ['class' => 'success', 'msg' => __('admin.TheOpreationDoneSuccessFully')]);
         return redirect()->to(route('admin.plans.index'));
     }
     public function delete_feature($id){
         PlanFeature::findOrFail($id)->delete();
+        Cache::forget('plans');
         session()->flash('alert', ['class' => 'success', 'msg' => __('admin.TheOpreationDoneSuccessFully')]);
         return back();
     }

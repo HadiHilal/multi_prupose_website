@@ -166,6 +166,7 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
 //        Maatwebsite\Excel\ExcelServiceProvider::class,
+        Torann\GeoIP\GeoIPServiceProvider::class,
 
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
@@ -188,6 +189,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
          //   'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'GeoIP' => Torann\GeoIP\Facades\GeoIP::class,
 
     ])->toArray(),
 

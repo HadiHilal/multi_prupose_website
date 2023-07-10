@@ -6,6 +6,7 @@ use App\Traits\ImgTrait;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Cache;
 use Modules\Blog\Entities\Blog;
 use Modules\Blog\Notifications\NotifyUsersOfNewBlog;
 use Modules\Category\Entities\Category;
@@ -115,6 +116,7 @@ class AdminController extends Controller
         $blog = Blog::findOrFail($id);
         $this->deleteImg($blog->img);
         $blog->delete();
+        Cache::forget('blogs');
         session()->flash('alert', ['class' => 'success', 'msg' => __('admin.TheOpreationDoneSuccessFully')]);
         return redirect()->to(route('admin.blogs.index'));
     }
@@ -140,7 +142,7 @@ class AdminController extends Controller
                 $subscriper->notify(new NotifyUsersOfNewBlog($blog->title , $blog->intro , 'www.google.com'));
             }
         }
-
+        Cache::forget('blogs');
         session()->flash('alert', ['class' => 'success', 'msg' => __('admin.TheOpreationDoneSuccessFully')]);
         return redirect()->to(route('admin.blogs.index'));
     }

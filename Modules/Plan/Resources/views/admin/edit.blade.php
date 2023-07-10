@@ -144,7 +144,7 @@
                      </div>
 
                          </div>
-                @foreach($plan->features as $feature)
+                @foreach($plan->features()->orderBy('included' , 'DESC')->get() as $feature)
                       <div id="repeaterContainer">
                             <div class="row mb-8 feature-container">
                                 <div class="col-xl-3">
@@ -218,10 +218,11 @@
         $('#addFeatureBtn').on('click', function() {
             var clonedContainer = featureContainer.clone();
             clonedContainer.find('input').val('');
-            clonedContainer.find('input[type="checkbox"]').prop('checked', true);
+            clonedContainer.find('input[type="checkbox"]').prop('checked', true).removeAttr('value');
             clonedContainer.find('.delete-feature').removeAttr('href').addClass('delete-feature-btn');
-
             $('#repeaterContainer').append(clonedContainer);
+
+
         });
 
         $(document).on('click', '.delete-feature-btn', function() {

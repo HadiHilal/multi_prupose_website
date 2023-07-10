@@ -82,19 +82,19 @@
 
 
             <!--begin::Table-->
-            <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_table_blogs">
+            <table class="table align-middle table-row-dashed fs-7 gy-5" id="kt_table_blogs">
                 <!--begin::Table head-->
                 <thead>
                     <!--begin::Table row-->
                     <tr class="text-start text-muted fw-bolder fs-7 text-uppercase gs-0">
                         <th></th>
-                        <th class="min-w-125px">{{__('admin.BlogImg')}}</th>
-                        <th class="min-w-125px">{{__('admin.BlogTitle')}}</th>
-                         <th class="min-w-125px">{{__('admin.Category')}}</th>
-                        <th class="min-w-125px">{{__('admin.Featured')}}</th>
-                        <th class="min-w-125px">{{__('admin.Published')}}</th>
-                        <th class="min-w-125px">{{__('admin.CreatedDate')}}</th>
-
+                        <th class="min-w-100px">{{__('admin.BlogImg')}}</th>
+                        <th class="min-w-100px">{{__('admin.BlogTitle')}}</th>
+                         <th class="min-w-100px">{{__('admin.Category')}}</th>
+                        <th class="min-w-100px">{{__('admin.Featured')}}</th>
+                        <th class="min-w-100px">{{__('admin.Published')}}</th>
+                        <th class="min-w-100px">{{__('admin.CreatedDate')}}</th>
+                        <th class="min-w-100px"><i class="bi bi-eye"></i></th>
                         <th class="text-end min-w-100px"></th>
 
                     </tr>
@@ -110,12 +110,12 @@
                         <td class="d-flex align-items-center">
 
                             <a target="_blank" href="{{asset('storage/' . $blog->img)}}">
-                                     <img height="60" src="{{asset('storage/' . $blog->img)}}" alt="blog img">
+                                     <img height="50" src="{{asset('storage/' . $blog->img)}}" alt="blog img">
                             </a>
                         </td>
                           <td>
-                              <a href="#">
-                                   {{$blog->title}} <i class="bi bi-arrow-up-right-square mx-1"></i>
+                              <a href="{{$blog->publish ? route('blogs.show' ,$blog->slug) : '#'}}">
+                                 {{ Str::limit($blog->title, 38) }} <i class="bi bi-arrow-up-right-square mx-1"></i>
                               </a>
                           </td>
 
@@ -151,6 +151,7 @@
                         <!--begin::Joined-->
                         <td>{{$blog->created_at->diffForHumans()}}</td>
                         <!--begin::Joined-->
+                            <td>{{$blog->views_count}}</td>
                         <!--begin::Action=-->
 
                         <td class="text-end">
