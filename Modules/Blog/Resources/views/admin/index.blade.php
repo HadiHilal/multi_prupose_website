@@ -93,6 +93,7 @@
                          <th class="min-w-100px">{{__('admin.Category')}}</th>
                         <th class="min-w-100px">{{__('admin.Featured')}}</th>
                         <th class="min-w-100px">{{__('admin.Published')}}</th>
+                        <th class="min-w-100px">{{__('admin.Service')}}</th>
                         <th class="min-w-100px">{{__('admin.CreatedDate')}}</th>
                         <th class="min-w-100px"><i class="bi bi-eye"></i></th>
                         <th class="text-end min-w-100px"></th>
@@ -119,7 +120,7 @@
                               </a>
                           </td>
 
-                                         <td>
+                          <td>
                           {{$blog->category->name}}
                         </td>
 
@@ -148,6 +149,17 @@
                             @endif
                         </td>
                         <!--end::Two step=-->
+                                    <td>
+                            <div class="badge badge-primary fw-bolder">
+                                @if($blog->service)
+
+                                     {{__('admin.Yes')}}
+                                @else
+                                    {{__('admin.No')}}
+                                @endif
+
+                            </div>
+                        </td>
                         <!--begin::Joined-->
                         <td>{{$blog->created_at->diffForHumans()}}</td>
                         <!--begin::Joined-->

@@ -54,6 +54,6 @@ return [
     'ThankYou' => 'شكرًا لك' ,
      'PreviousPost' => 'المنشور السابق',
      'NextPost' => 'المنشور التالي' ,
-    'PageNotFound' => 'لم يتم العثور على صفحة !'
-
+    'PageNotFound' => 'لم يتم العثور على صفحة !' ,
+     'OurServices' => 'خدماتنا'
     ];

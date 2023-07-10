@@ -135,6 +135,7 @@ class AdminController extends Controller
         $blog->content = $request['content'];
         $blog->publish = $request->has('publish') ? 1 : 0;
         $blog->featured = $request->has('featured') ? 1 : 0;
+        $blog->service = $request->has('service') ? 1 : 0;
         $blog->save();
         if ($blog->publish){
             $subscripers = Subscriber::all();

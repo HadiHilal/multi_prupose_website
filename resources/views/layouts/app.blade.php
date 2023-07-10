@@ -56,6 +56,10 @@
     <link href="/front/css/responsive.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
+    @if(App::currentLocale() == 'ar')
+          <link href="/front/css/rtl.css" rel="stylesheet" />
+
+    @endif
     <style>
         nav.navbar.bootsnav ul.nav > li.active > a {
             background-color: unset!important;
@@ -147,6 +151,7 @@
 
                         <li class="@if(isset($home)) active @endif"><a href="{{url('/')}}">{{__('frontend.Home')}}</a></li>
                         <li class="@if(isset($pricing)) active @endif"><a href="{{route('pricing')}}">{{__('frontend.OurPackages')}}</a></li>
+                        <li class="@if(isset($index_services)) active @endif"><a href="{{route('services')}}">{{__('frontend.OurServices')}}</a></li>
                         <li class="@if(isset($index_blogs)) active @endif"><a href="{{route('blogs.index')}}">{{__('frontend.Blogs')}}</a></li>
                         <li class="@if(isset($contact)) active @endif"><a href="{{route('contact')}}">{{__('frontend.ContactUs')}}</a></li>
                         @auth()

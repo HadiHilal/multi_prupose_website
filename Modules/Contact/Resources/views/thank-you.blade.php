@@ -8,7 +8,7 @@
 
         <!-- Start Breadcrumb
     ============================================= -->
-    <div class="breadcrumb-area shadow dark bg-cover text-center text-light" style="background-image: url({{asset('storage/' . $settings->get('contact_us_bg'))}});">
+    <div class="breadcrumb-area shadow dark bg-cover text-center text-light" style="background-image: url({{asset('storage/' . $settings->get('thanks_bg'))}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">

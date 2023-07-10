@@ -24,6 +24,7 @@ return new class extends Migration
             $table->json('keywords')->nullable();
             $table->boolean('featured')->default(0);
             $table->boolean('publish')->default(1);
+            $table->boolean('service')->default(0);
             $table->timestamps();
         });
     }

@@ -54,6 +54,7 @@ return [
     'ThankYou' => 'Thank You' ,
      'PreviousPost' => 'Previous Post',
      'NextPost' => 'Next Post',
-    'PageNotFound' => 'Sorry Page Was Not Found!'
+    'PageNotFound' => 'Sorry Page Was Not Found!' ,
+    'OurServices' => 'Our Services'
 
     ];
