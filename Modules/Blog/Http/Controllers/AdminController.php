@@ -66,9 +66,6 @@ class AdminController extends Controller
         return $this->extracted($request, $blog);
 
     }
-
-
-
     /**
      * Show the form for editing the specified resource.
      * @param int $id
