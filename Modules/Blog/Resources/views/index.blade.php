@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title' , __('frontend.Blogs'))
-@section('description' ,$seo->get('about'))
-@section('keywords' , $seo->get('keywords'))
+@section('description' ,$seo->get('website_desc'))
+@section('keywords' , $seo->get('website_keywords'))
 @section('site-img' , asset('storage/' . $settings->get('meta_img')))
 
 @section('content')

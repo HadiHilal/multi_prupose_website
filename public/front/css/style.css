@@ -6,7 +6,7 @@ Description:
 Version: 1.1.2
 
 Main Font    : Quicksand
-Main Color   : #f35a38
+Main Color   : #1d9075
 
 -------------------------------------
 
@@ -377,7 +377,7 @@ a.btn-simple i {
 }
 
 a.btn-simple:hover {
-    color: #f35a38;
+    color: #1d9075;
 }
 
 .video-btn {
@@ -576,14 +576,14 @@ a.btn-simple:hover {
 
 /* Button Animation Border theme */
 .btn-animation.border.theme {
-    border: 2px solid #f35a38 !important;
+    border: 2px solid #1d9075 !important;
     display: inline-block;
     padding: 12px 30px;
     text-transform: uppercase;
     font-weight: 700;
     position: relative;
     z-index: 1;
-    color: #f35a38;
+    color: #1d9075;
 }
 
 .blue .btn-animation.border.theme {
@@ -604,7 +604,7 @@ a.btn-simple:hover {
   height: 100%;
   width: 0;
   transition: all 0.35s ease-in-out;
-  background: #f35a38;
+  background: #1d9075;
   z-index: -1;
 }
 
@@ -649,7 +649,7 @@ a.btn-simple:hover {
     content: "";
     height: 2px;
     width: 40px;
-    background: #f35a38;
+    background: #1d9075;
     transition: all 0.35s ease-in-out;
 }
 
@@ -667,7 +667,7 @@ a.btn-simple:hover {
 }
 
 .btn-animation.theme.effect {
-    border: 2px solid #f35a38 !important;
+    border: 2px solid #1d9075 !important;
     display: inline-block;
     padding: 12px 30px;
     text-transform: uppercase;
@@ -685,7 +685,7 @@ a.btn-simple:hover {
   height: 100%;
   width: 100%;
   transition: all 0.35s ease-in-out;
-  background: #f35a38;
+  background: #1d9075;
   z-index: -1;
 }
 
@@ -908,7 +908,7 @@ body.dark-layout .bg-gray {
 }
 
 .bg-theme {
-  background-color: #f35a38;
+  background-color: #1d9075;
 }
 
 .bg-theme-blue {
@@ -1014,7 +1014,7 @@ body.dark-layout .bg-gray {
 }
 
 .shadow.theme::after {
-  background: #f35a38 none repeat scroll 0 0;
+  background: #1d9075 none repeat scroll 0 0;
   content: "";
   height: 100%;
   left: 0;
@@ -1026,7 +1026,7 @@ body.dark-layout .bg-gray {
 }
 
 .shadow.theme-hard::after {
-  background: #f35a38 none repeat scroll 0 0;
+  background: #1d9075 none repeat scroll 0 0;
   content: "";
   height: 100%;
   left: 0;
@@ -1193,7 +1193,7 @@ body.dark-layout .bg-gray {
 
 .btn-gray.effect:hover {
   background-color: transparent;
-  color: #f35a38;
+  color: #1d9075;
   border: 2px solid #b6d4ef !important;
 }
 
@@ -1225,7 +1225,7 @@ body.dark-layout .bg-gray {
 .btn-standard {
     display: inline-block;
     text-align: center;
-    color: #f35a38;
+    color: #1d9075;
     position: relative;
     margin-top: 15px;
     border: 1px solid #e7e7e7;
@@ -1244,7 +1244,7 @@ body.dark-layout .bg-gray {
     width: 35px;
     line-height: 35px;
     text-align: center;
-    color: #f35a38;
+    color: #1d9075;
     font-size: 15px;
     border-radius: 50%;
     position: relative;
@@ -1259,7 +1259,7 @@ body.dark-layout .bg-gray {
 .bg-gradient .btn-standard:hover,
 .shadow .btn-standard:hover {
   background: #ffffff;
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .btn-dark:hover,
@@ -1282,18 +1282,18 @@ body.dark-layout .bg-gray {
 
 .bg-gradient {
     background-image: linear-gradient(90deg, rgba(228,41,63,1) 0%, rgba(255,65,87,1) 100%);
-    background-color: #f35a38;
+    background-color: #1d9075;
 }
 
 .bg-gradient-blue {
     background-image: linear-gradient(90deg, rgba(70,40,186,1) 32%, rgba(8,113,255,1) 100%);
-    background-color: #f35a38;
+    background-color: #1d9075;
 }
 
 .btn-theme {
-  background-color: #f35a38;
+  background-color: #1d9075;
   color: #ffffff !important;
-  border: 2px solid #f35a38;
+  border: 2px solid #1d9075;
 }
 
 .blue .btn-theme {
@@ -1305,7 +1305,7 @@ body.dark-layout .bg-gray {
 .btn-theme.border {
   background-color: transparent;
   color: #232323 !important;
-  border: 2px solid #f35a38 !important;
+  border: 2px solid #1d9075 !important;
 }
 
 .blue .btn-theme.border {
@@ -1315,9 +1315,9 @@ body.dark-layout .bg-gray {
 }
 
 .btn-theme.border:hover {
-  background-color: #f35a38;
+  background-color: #1d9075;
   color: #ffffff !important;
-  border: 2px solid #f35a38 !important;
+  border: 2px solid #1d9075 !important;
 }
 
 .blue .btn-theme.border:hover {
@@ -1328,8 +1328,8 @@ body.dark-layout .bg-gray {
 
 .btn-theme.effect:hover,
  .btn-theme.effect:focus {
-  background: #f35a38 none repeat scroll 0 0;
-  border: 2px solid #f35a38;
+  background: #1d9075 none repeat scroll 0 0;
+  border: 2px solid #1d9075;
   color: #ffffff;
 }
 
@@ -1355,14 +1355,14 @@ body.dark-layout .bg-gray {
     text-transform: uppercase;
     display: inline-block;
     font-size: 14px;
-    color: #f35a38;
+    color: #1d9075;
     position: relative;
     z-index: 1;
     padding-left: 50px;
 }
 
 .btn-smart:hover {
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .btn-smart.light {
@@ -1376,7 +1376,7 @@ body.dark-layout .bg-gray {
     content: "";
     height: 1px;
     width: 40px;
-    background: #f35a38;
+    background: #1d9075;
 }
 
 .btn-smart.light::after {
@@ -1407,7 +1407,7 @@ body.dark-layout .bg-gray {
 
 .btn-gradient::after {
   background-image: linear-gradient(90deg, rgba(228,41,63,1) 0%, rgba(255,65,87,1) 100%);
-  background-color: #f35a38;
+  background-color: #1d9075;
   transition: all 500ms ease;
   position: absolute;
   left: 0;
@@ -1425,7 +1425,7 @@ body.dark-layout .bg-gray {
 
 .btn-gradient:hover::after {
   background-image: linear-gradient(90deg, rgba(228,41,63,1) 0%, rgba(255,65,87,1) 100%);
-  background-color: #f35a38;
+  background-color: #1d9075;
   height: 100%;
   width: 100%;
   left: 0;
@@ -1561,8 +1561,8 @@ nav.bootsnav.navbar-default.info-topbar.active-full ul li a {
 .attr-nav > a.btn-theme.effect:hover,
 .attr-nav > a.btn-theme.effect,
 .attr-nav > a.btn-theme.effect:focus {
-  background: #f35a38 none repeat scroll 0 0;
-  border: 2px solid #f35a38;
+  background: #1d9075 none repeat scroll 0 0;
+  border: 2px solid #1d9075;
   color: #ffffff !important;
 }
 
@@ -1586,7 +1586,7 @@ nav.bootsnav.navbar-default.info-topbar.sticked ul li a {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  color: #f35a38;
+  color: #1d9075;
   display: inline-block;
   font-size: 14px;
   height: 40px;
@@ -1605,7 +1605,7 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
 .site-heading h4 {
     text-transform: uppercase;
     font-weight: 700;
-    color: #f35a38;
+    color: #1d9075;
     font-size: 20px;
     position: relative;
     z-index: 1;
@@ -1619,7 +1619,7 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
     content: "";
     height: 10px;
     width: 100%;
-    background: #f35a38;
+    background: #1d9075;
     z-index: -1;
     opacity: 0.1;
 }
@@ -1629,11 +1629,11 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
 }
 
 .site-heading.clean h2 span {
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .site-heading h2 span {
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .site-heading.barber h2 span {
@@ -1653,7 +1653,7 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
 }
 
 .site-heading h2 span {
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .site-heading {
@@ -1702,7 +1702,7 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
     display: inline-block;
     margin-bottom: 25px;
     border-radius: 5px;
-    color: #f35a38;
+    color: #1d9075;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 16px;
@@ -1727,7 +1727,7 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
     top: 50%;
     height: 1px;
     width: 30px;
-    background: #f35a38;
+    background: #1d9075;
     content: "";
     margin-top: -1px;
 }
@@ -1744,7 +1744,7 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
 .heading-center h5 {
     display: inline-block;
     border-radius: 5px;
-    color: #f35a38 !important;
+    color: #1d9075 !important;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 16px;
@@ -1786,7 +1786,7 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
 .heading-left h5 {
     text-transform: uppercase;
     font-weight: 800;
-    color: #f35a38;
+    color: #1d9075;
 }
 
 .heading-left p {
@@ -1825,7 +1825,7 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
 .top-bar-area .button a {
     display: inline-block;
     background: #ffffff;
-    color: #f35a38;
+    color: #1d9075;
     padding: 10px 35px;
     clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
     text-transform: uppercase;
@@ -1856,7 +1856,7 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
 }
 
 .top-bar-area .link a:last-child {
-    color: #f35a38;
+    color: #1d9075;
     padding: 3px 30px;
     background: #ffffff;
     border-radius: 30px;
@@ -1926,7 +1926,7 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
     text-transform: capitalize;
     box-shadow: inherit;
     background-image: linear-gradient(90deg, rgba(228,41,63,1) 0%, rgba(255,65,87,1) 100%);
-    background-color: #f35a38;
+    background-color: #1d9075;
     padding: 5px 15px;
 }
 
@@ -2871,7 +2871,7 @@ body,
 }
 
 .banner-area.text-default .content h2 strong {
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .blue .banner-area.text-default .content h2 strong {
@@ -2926,7 +2926,7 @@ body,
 .banner-area.portfolio .content h3 {
     margin: 0;
     font-weight: 700;
-    color: #f35a38;
+    color: #1d9075;
 }
 
 .banner-area.circle-bg .content h2 {
@@ -3076,7 +3076,7 @@ body,
      # Video Button Play
 =================================================================== */
 .video-play-button {
-  color: #f35a38;
+  color: #1d9075;
   font-size: 30px;
   left: 50%;
   padding-left: 7px;
@@ -3111,7 +3111,7 @@ body,
 
 .video-play-button.theme:before,
 .video-play-button.theme:after {
-  background: #f35a38 repeat scroll 0 0;
+  background: #1d9075 repeat scroll 0 0;
 }
 
 .orange .video-play-button.theme:before,
@@ -3173,7 +3173,7 @@ body,
   display: block;
   position: relative;
   z-index: 3;
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .blue .video-play-button i {
@@ -3207,7 +3207,7 @@ body,
 .video-play-button.relative i {
   line-height: 83px;
   font-size: 25px;
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .video-play-button.theme i {
@@ -3458,7 +3458,7 @@ body,
 .features-items .item .top > i {
     display: inline-block;
     font-size: 70px;
-    color: #f35a38;
+    color: #1d9075;
     position: relative;
     z-index: 1;
     margin-bottom: 30px;
@@ -3490,7 +3490,7 @@ body,
     padding: 60px 37px;
     background: #ffffff;
     box-shadow: 0 0 10px #cccccc;
-    border-bottom: #f35a38;
+    border-bottom: #1d9075;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -3502,7 +3502,7 @@ body,
 }
 
 .features-items .single-item .item::after {
-    background: linear-gradient(to bottom, #f35a38 0%,#ff2339 100%);
+    background: linear-gradient(to bottom, #1d9075 0%,#ff2339 100%);
     position: absolute;
     left: 0;
     top: -100%;
@@ -3685,7 +3685,7 @@ body,
     display: inline-block;
     margin-bottom: 25px;
     border-radius: 5px;
-    color: #f35a38;
+    color: #1d9075;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 16px;
@@ -3700,7 +3700,7 @@ body,
     top: 50%;
     height: 1px;
     width: 30px;
-    background: #f35a38;
+    background: #1d9075;
     content: "";
     margin-top: -1px;
 }
@@ -3861,7 +3861,7 @@ ul.achivement li .counter {
     justify-content: center;
     font-size: 55px;
     font-weight: 700;
-    color: #f35a38;
+    color: #1d9075;
     line-height: 1;
     margin-bottom: 5px;
     font-family: 'Quicksand', sans-serif;
@@ -3967,7 +3967,7 @@ ul.achivement li:last-child .counter {
     text-align: center;
     border-radius: 50%;
     font-weight: 700;
-    color: #f35a38;
+    color: #1d9075;
 }
 
 .about-content-area .top-info h4 {
@@ -4299,7 +4299,7 @@ ul.achivement li:last-child .counter {
     display: inline-block;
     height: 90px;
     width: 90px;
-    background: #f35a38;
+    background: #1d9075;
     line-height: 90px;
     color: #ffffff;
     font-size: 45px;
@@ -4346,7 +4346,7 @@ ul.achivement li:last-child .counter {
 }
 
 .our-features-area .features-box .single-item:nth-child(2) .item .icon i {
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .our-features-area .features-box .single-item:nth-child(3) .item .icon i {
@@ -4484,7 +4484,7 @@ ul.achivement li:last-child .counter {
 }
 
 .dark-layout .services-area .services-box .item i {
-    color: #f35a38;
+    color: #1d9075;
 }
 
 .services-area .services-box .item i::after {
@@ -4883,7 +4883,7 @@ ul.achivement li:last-child .counter {
     content: "";
     height: 2px;
     width: 50px;
-    border-bottom: 2px solid #f35a38;
+    border-bottom: 2px solid #1d9075;
 }
 
 .services-details-items .services-sidebar .services-list a {
@@ -4915,7 +4915,7 @@ ul.achivement li:last-child .counter {
     content: "";
     height: 100%;
     width: 0;
-    background: #f35a38;
+    background: #1d9075;
     z-index: -1;
     transition: all 0.35s ease-in-out;
 }
@@ -4972,7 +4972,7 @@ ul.achivement li:last-child .counter {
     height: 80px;
     width: 80px;
     line-height: 80px;
-    background: #f35a38;
+    background: #1d9075;
     border-radius: 50%;
     position: relative;
     z-index: 1;
@@ -4992,7 +4992,7 @@ ul.achivement li:last-child .counter {
     content: "";
     height: 120%;
     width: 120%;
-    background: #f35a38;
+    background: #1d9075;
     z-index: -1;
     border-radius: 50%;
     opacity: 0.3;
@@ -5013,7 +5013,7 @@ ul.achivement li:last-child .counter {
 .services-details-items .services-sidebar .single-widget.brochure a i {
     font-size: 20px;
     font-weight: 600;
-    color: #f35a38;
+    color: #1d9075;
     margin-right: 16px;
 }
 
@@ -5022,7 +5022,7 @@ ul.achivement li:last-child .counter {
 }
 
 .services-details-items .services-sidebar .single-widget.brochure a:hover {
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .services-details-items .services-single-content h2 {
@@ -5038,7 +5038,7 @@ ul.achivement li:last-child .counter {
 .services-details-area .features i {
     display: inline-block;
     font-size: 50px;
-    color: #f35a38;
+    color: #1d9075;
     margin-right: 25px;
 }
 
@@ -5410,7 +5410,7 @@ ul.achivement li:last-child .counter {
 
 .team-area .team-items .thumb .social li:first-child a,
 .team-area .team-items .thumb .social li a:hover {
-    background: #f35a38;
+    background: #1d9075;
     color: #ffffff;
 }
 
@@ -5483,7 +5483,7 @@ ul.achivement li:last-child .counter {
 
 .team-single-area .thumb .social li:first-child a,
 .team-single-area .thumb .social li a:hover {
-    background: #f35a38;
+    background: #1d9075;
     color: #ffffff;
 }
 
@@ -5512,7 +5512,7 @@ ul.achivement li:last-child .counter {
 }
 
 .team-single-area .right-info ul li a:hover {
-    color: #f35a38;
+    color: #1d9075;
 }
 
 .team-single-area .right-info {
@@ -5525,7 +5525,7 @@ ul.achivement li:last-child .counter {
 
 .team-single-area .right-info span {
     display: block;
-    color: #f35a38;
+    color: #1d9075;
     margin-bottom: 25px;
     text-transform: uppercase;
     font-weight: 600;
@@ -5547,7 +5547,7 @@ ul.achivement li:last-child .counter {
 }
 
 .team-single-area .social ul li a:hover {
-  background: #f35a38;
+  background: #1d9075;
   color: #ffffff;
 }
 
@@ -5863,7 +5863,7 @@ ul.achivement li:last-child .counter {
     top: 0;
     content: "\4e";
     font-family: 'ElegantIcons';
-    color: #f35a38;
+    color: #1d9075;
 }
 
 .faq-area .faq-content {
@@ -5963,7 +5963,7 @@ ul.achivement li:last-child .counter {
 }
 
 .dark-layout .faq-area .faq-content .card .card-header h4 {
-    background: #f35a38;
+    background: #1d9075;
 }
 
 .faq-area .faq-content .card .card-header h4.collapsed {
@@ -6127,9 +6127,9 @@ ul.achivement li:last-child .counter {
 }
 
 .pricing-footer a.btn-dark.effect:hover {
-  background: #f35a38;
+  background: #1d9075;
   color: #ffffff !important;
-  border-color: #f35a38;
+  border-color: #1d9075;
 }
 
 .blue .pricing-footer a.btn-dark.effect:hover {
@@ -6286,7 +6286,7 @@ ul.achivement li:last-child .counter {
     text-align: center;
     border-radius: 50%;
     z-index: 1;
-    background: #f35a38;
+    background: #1d9075;
     transform: translateY(30px);
     opacity: 0;
 }
@@ -6385,7 +6385,7 @@ ul.achivement li:last-child .counter {
 }
 
 .projects-area .projects-carousel .item .overlay > span {
-    background: #f35a38;
+    background: #1d9075;
     font-size: 36px;
     display: inline-block;
     color: #ffffff;
@@ -6817,7 +6817,7 @@ ul.achivement li:last-child .counter {
 .skill-items .progress-box .progress .progress-bar {
   height: 6px;
   border-radius: 30px;
-  background: #f35a38;
+  background: #1d9075;
   top: 12px;
   position: relative;
   overflow: inherit;
@@ -7236,7 +7236,7 @@ ul.achivement li:last-child .counter {
     height: 40px;
     width: 40px;
     line-height: 40px;
-    background: #f35a38;
+    background: #1d9075;
     border-radius: 50%;
     color: #ffffff;
     text-align: center;
@@ -7288,7 +7288,7 @@ ul.achivement li:last-child .counter {
 
 .partner-area h2 strong {
     text-decoration: underline;
-    color: #f35a38;
+    color: #1d9075;
 }
 
 .blue .partner-area h2 strong {
@@ -7372,7 +7372,7 @@ ul.achivement li:last-child .counter {
 }
 
 .blog-area .item .date {
-    background: #f35a38;
+    background: #1d9075;
     color: #ffffff;
     display: inline-block;
     padding: 0px 10px;
@@ -7457,7 +7457,7 @@ ul.achivement li:last-child .counter {
 }
 
 .blog-area.blog-standard .single-item.thumb-less .item .meta ul li a:hover {
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .blue .blog-area.blog-standard .single-item.thumb-less .item .meta ul li a:hover {
@@ -7546,7 +7546,7 @@ ul.achivement li:last-child .counter {
 }
 
 .blog-area .footer-meta ul li a:hover {
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .blue .blog-area .footer-meta ul li a:hover {
@@ -7625,7 +7625,7 @@ ul.achivement li:last-child .counter {
 
 .blog-area .info .meta li a:hover,
 .blog-area .info h4 a:hover {
-    color: #f35a38;
+    color: #1d9075;
 }
 
 .blue .blog-area .info .meta li a:hover,
@@ -7680,8 +7680,8 @@ ul.achivement li:last-child .counter {
 }
 
 .pagi-area .pagination li.active a {
-  background: #f35a38;
-  border-color: #f35a38;
+  background: #1d9075;
+  border-color: #1d9075;
 }
 
 /* Sidebar */
@@ -7721,7 +7721,7 @@ ul.achivement li:last-child .counter {
   content: "";
   height: 2px;
   width: 50px;
-  border-bottom: 2px solid #f35a38;
+  border-bottom: 2px solid #1d9075;
 }
 
 .blog-area .sidebar input[type="text"] {
@@ -7758,7 +7758,7 @@ ul.achivement li:last-child .counter {
 }
 
 .blog-area .sidebar input[type="submit"]:hover {
-  background: #f35a38 none repeat scroll 0 0;
+  background: #1d9075 none repeat scroll 0 0;
 }
 
 .blog-area .sidebar .sidebar-item {
@@ -7792,7 +7792,7 @@ ul.achivement li:last-child .counter {
 }
 
 .blog-area .sidebar .sidebar-item li a:hover {
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .blog-area .sidebar .sidebar-item.category li a span {
@@ -7848,7 +7848,7 @@ ul.achivement li:last-child .counter {
 }
 
 .sidebar-item.recent-post li a:hover {
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .sidebar-item.recent-post li a span {
@@ -8039,7 +8039,7 @@ ul.achivement li:last-child .counter {
 }
 
 .sidebar-item.tags ul li a:hover {
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .blog-area .sidebar .sidebar-item.add-banner .sidebar-info {
@@ -8059,7 +8059,7 @@ ul.achivement li:last-child .counter {
   content: "";
   height: 100%;
   width: 100%;
-  background: #f35a38;
+  background: #1d9075;
   z-index: -1;
   opacity: 0.7;
 }
@@ -8087,7 +8087,7 @@ ul.achivement li:last-child .counter {
 
 /* Blog Single */
 .blog-area.single .item .content-box span {
-  background: #f35a38 none repeat scroll 0 0;
+  background: #1d9075 none repeat scroll 0 0;
   color: #ffffff;
   display: inline-block;
   font-weight: 600;
@@ -8181,7 +8181,7 @@ ul.achivement li:last-child .counter {
   content: "";
   height: 90%;
   width: 3px;
-  background: #f35a38;
+  background: #1d9075;
 }
 
 .blog-area .item blockquote::after {
@@ -8225,7 +8225,7 @@ ul.achivement li:last-child .counter {
 
 .blog-area .blog-content .share li a {
   display: inline-block;
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .blog-area .blog-content .share li.facebook a {
@@ -8279,7 +8279,7 @@ ul.achivement li:last-child .counter {
 }
 
 .blog-area.single .post-pagi-area h5:hover {
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .blog-area.single.color-yellow .post-pagi-area a:hover {
@@ -8408,7 +8408,7 @@ ul.achivement li:last-child .counter {
 }
 
 .comments-list .commen-item .content .reply a:hover {
-    background: #f35a38;
+    background: #1d9075;
 }
 
 .comments-list .commen-item .content .reply i {
@@ -8427,7 +8427,7 @@ ul.achivement li:last-child .counter {
 
 .comments-list .commen-item .content .title span {
     font-weight: 400;
-    color: #f35a38;
+    color: #1d9075;
     display: block;
     margin-top: 0;
     font-size: 13px;
@@ -8461,7 +8461,7 @@ ul.achivement li:last-child .counter {
 }
 
 .comments-info a:hover {
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .comments-info a i {
@@ -8525,13 +8525,13 @@ ul.pagination {
   padding: 15px 20px;
   border-radius: 5px;
   margin: 0 2px;
-  color: #f35a38;
+  color: #1d9075;
   font-weight: 800;
 }
 
 .pagination li.page-item.active a {
-  background: #f35a38;
-  border-color: #f35a38;
+  background: #1d9075;
+  border-color: #1d9075;
 }
 
 
@@ -8594,7 +8594,7 @@ ul.pagination {
 
 .contact-area .info-items {
     padding: 50px 30px;
-    background: #f35a38;
+    background: #1d9075;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     background-size: cover;
@@ -8803,7 +8803,7 @@ footer::after {
     opacity: 0.5;
 }
 
-footer.bg-dark::after {
+footer.bg-main::after {
   background: rgba(255, 255, 255, 0.016);
   opacity: 1;
 }
@@ -8854,7 +8854,7 @@ footer .widget-title {
     font-weight: 700;
 }
 
-footer.bg-dark .item p {
+footer.bg-main .item p {
     color: #cccccc;
 }
 
@@ -8892,7 +8892,7 @@ footer .f-item .address ul li p {
     color: #232323;
 }
 
-footer.bg-dark .f-item .address ul li p {
+footer.bg-main .f-item .address ul li p {
     color: #ffffff;
 }
 
@@ -8906,7 +8906,7 @@ footer .f-item .address ul li strong {
     color: #666666;
 }
 
-footer.bg-dark .f-item .address ul li strong {
+footer.bg-main .f-item .address ul li strong {
     color: #cccccc;
 }
 
@@ -8924,15 +8924,15 @@ footer .f-item.link li a {
     color: #666666;
 }
 
-footer.bg-dark .f-item.link li a {
+footer.bg-main .f-item.link li a {
     color: #cccccc;
 }
 
 footer .f-item.link li a:hover {
-  color: #f35a38;
+  color: #1d9075;
 }
 
-footer.bg-dark .f-item.link li a:hover {
+footer.bg-main .f-item.link li a:hover {
   color: #ffffff;
 }
 
@@ -8943,7 +8943,7 @@ footer.bg-dark .f-item.link li a:hover {
     padding: 30px 0;
 }
 
-.bg-dark .footer-bottom {
+.bg-main .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -8968,8 +8968,8 @@ footer .footer-bottom form input:focus {
     min-height: 60px;
 }
 
-footer.bg-dark .footer-bottom form input,
-footer.bg-dark .footer-bottom form input:focus {
+footer.bg-main .footer-bottom form input,
+footer.bg-main .footer-bottom form input:focus {
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -8998,7 +8998,7 @@ footer .footer-bottom form span.input-group-addon {
     min-height: 60px;
 }
 
-footer.bg-dark .footer-bottom form span.input-group-addon {
+footer.bg-main .footer-bottom form span.input-group-addon {
     border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -9009,7 +9009,7 @@ footer .footer-bottom form span.input-group-addon button {
     right: 10px;
     width: 40px;
     border: none;
-    background: #f35a38;
+    background: #1d9075;
     border-radius: 5px;
     color: #ffffff;
     z-index: 9;
@@ -9019,16 +9019,16 @@ footer .footer-bottom form span.input-group-addon button {
     color: #4628ba !important;
 }
 
-footer.bg-dark .footer-bottom form span.input-group-addon button {
+footer.bg-main .footer-bottom form span.input-group-addon button {
     background: #ffffff;
-    color: #f35a38;
+    color: #1d9075;
 }
 
 footer .footer-bottom p {
   margin-bottom: 0;
 }
 
-footer.bg-dark .footer-bottom p {
+footer.bg-main .footer-bottom p {
   color: #cccccc;
 }
 
@@ -9067,7 +9067,7 @@ footer.bg-dark .footer-bottom p {
   width: 100px;
   height: 100px;
   border: 3px solid rgba(243, 90, 56, 0.2);
-  border-top-color: #f35a38;
+  border-top-color: #1d9075;
   border-radius: 50%;
   text-align: center;
   line-height: 150px;
@@ -9114,4 +9114,7 @@ footer.bg-dark .footer-bottom p {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+.bg-main{
+    background-color: #209178 !important;
 }

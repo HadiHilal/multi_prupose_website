@@ -1,16 +1,22 @@
 @extends('layouts.app')
 @section('title' , __('frontend.Home'))
-@section('description' ,$seo->get('about'))
-@section('keywords' , $seo->get('keywords'))
+@section('description' ,$seo->get('website_desc'))
+@section('keywords' , $seo->get('website_keywords'))
 @section('site-img' , asset('storage/' . $settings->get('meta_img')))
 
 @section('css')
     <style>
-       .pricing-area .pricing-header img {
-        height: 25px!important;
-        margin-top: 30px;
-        margin-bottom: 20px;
-    }
+.pricing-area .pricing-header img {
+    height: 150px!important;
+    margin-top: 30px;
+    width: 150px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+.main-services-box .item .icon i {
+    font-size: 30px !important;
+}
+
     </style>
 
 @endsection
@@ -26,7 +32,7 @@
                             <div class="row align-center">
                                 <div class="col-lg-6">
                                     <div class="content">
-                                        <h2 class="wow fadeInDown" data-wow-duration="400ms">{{$seo->get('main_title')}}</h2>
+                                        <h1 class="wow fadeInDown h2" data-wow-duration="400ms">{{$seo->get('main_title')}}</h1>
                                         <p class="wow fadeInUp" data-wow-duration="500ms">
                                            {{$seo->get('sub_title')}}
                                         </p>
@@ -40,9 +46,9 @@
                                 </div>
                                 <div class="col-lg-6 thumb multi-items">
                                     <div class="thumb-box">
-                                        <img class="wow fadeInDown" src="{{asset('storage/' . $settings->get('slide_img')) ?? '/front/img/illustration/dashboard.png'}}" alt="Dashbaord">
-                                        <img class="wow fadeInUp" data-wow-delay="300ms" src="/front/img/illustration/man-1.png" alt="illustration">
-                                        <img class="wow fadeInUp" data-wow-delay="800ms" src="/front/img/illustration/man-2.png" alt="illustration">
+                                        <img class="wow fadeInDown" src="{{asset('storage/' . $settings->get('slide_img')) ?? '/public/front/img/illustration/dashboard.png'}}" alt="Dashbaord">
+                                        <img class="wow fadeInUp" data-wow-delay="300ms" src="/public/front/img/illustration/man-1.png" alt="illustration">
+                                        <img class="wow fadeInUp" data-wow-delay="800ms" src="/public/front/img/illustration/man-2.png" alt="illustration">
                                     </div>
                                 </div>
                             </div>
@@ -59,57 +65,30 @@
     <div class="feature-area default-padding-bottom bottom-less">
          <!-- Shape -->
         <div class="fixed-bottom-shape">
-            <img src="/front/img/shape/19.png" alt="Shape">
+           <img src="{{ asset('front/img/shape/19.png') }}" alt="Shape">
+
         </div>
         <!-- Shape -->
         <div class="container">
             <div class="feature-items text-center">
                 <div class="row">
+                        @foreach($services as $service)
                     <!-- Single Item -->
                     <div class="single-item col-lg-4 col-md-6">
                         <div class="item">
                             <div class="info">
-                                <h4>Management</h4>
+                                <a href="{{route('services.show' , $service->slug)}}">   <h4>{{ Str::limit($service->title, 38) }}</h4> </a>
                                 <p>
-                                    Years use place decay sex worth drift point table lasting end article express fortune demands own charmed.
+                                    {{ Str::limit($service->intro, 100) }}
                                 </p>
                             </div>
                             <div class="icon">
-                                <img src="/front/img/icon/management.png" alt="Icon">
+                                <a href="{{route('services.show' , $service->slug)}}">  <img src="{{asset('storage/' . $service->img) }}" alt="service "> </a>
                             </div>
                         </div>
                     </div>
                     <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="single-item col-lg-4 col-md-6">
-                        <div class="item">
-                            <div class="info">
-                                <h4>Digital Branding</h4>
-                                <p>
-                                    Twist use place decay sex worth drift point table lasting end article express fortune demands own charmed.
-                                </p>
-                            </div>
-                            <div class="icon">
-                                <img src="/front/img/icon/branding.png" alt="Icon">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="single-item col-lg-4 col-md-6">
-                        <div class="item">
-                            <div class="info">
-                                <h4>Web Interactive</h4>
-                                <p>
-                                    Pairs use place decay sex worth drift point table lasting end article express fortune demands own charmed.
-                                </p>
-                            </div>
-                            <div class="icon">
-                                <img src="/front/img/icon/Interaction.png" alt="Icon">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -127,10 +106,10 @@
                             <li>
                                 <div class="fun-fact">
                                     <div class="counter">
-                                        <div class="timer" data-to="360" data-speed="5000">360</div>
+                                        <div class="timer" data-to="80" data-speed="5000">90</div>
                                         <div class="operator">K</div>
                                     </div>
-                                    <span class="medium">World Customer</span>
+                                    <span class="medium"> {{ __('frontend.WorldCustomer') }}</span>
                                 </div>
                             </li>
                             <li>
@@ -139,16 +118,16 @@
                                         <div class="timer" data-to="100" data-speed="5000">100</div>
                                         <div class="operator">%</div>
                                     </div>
-                                    <span class="medium">Positive Rating</span>
+                                    <span class="medium">{{ __('frontend.PositiveRating') }} </span>
                                 </div>
                             </li>
                             <li>
                                 <div class="fun-fact">
                                     <div class="counter">
-                                        <div class="timer" data-to="874" data-speed="5000">874</div>
+                                        <div class="timer" data-to="50" data-speed="5000">50</div>
                                         <div class="operator">+</div>
                                     </div>
-                                    <span class="medium">Total Branch</span>
+                                    <span class="medium">{{ __('frontend.Contract') }}</span>
                                 </div>
                             </li>
                         </ul>
@@ -156,23 +135,23 @@
                 </div>
                 <div class="col-lg-5 offset-lg-1 info">
                     <div class="top-info">
-                        <h2>Trust the Experts for All Your business Needs</h2>
+                        <h2>{{ __('frontend.Trust') }}</h2>
                         <p>
-                            Talking justice welcome message inquiry in started of am me. Led own hearted highest visited lasting sir through compass his. Guest tiled he quick by so these trees am.
+                            {{ __('frontend.Working') }}
                         </p>
                         <div class="row align-center">
                             <div class="col-lg-6">
                                 <ul>
-                                    <li>The Best Services</li>
-                                    <li>Free Consultation</li>
-                                    <li>24/7 Free support</li>
+                                    <li>{{ __('frontend.WeOffer') }}</li>
+                                    <li>{{ __('frontend.FreeConsultations') }}</li>
+                                    <li>{{ __('frontend.24/16hourSupport') }}</li>
                                 </ul>
                             </div>
                             <div class="col-lg-6">
-                                <h4>25 <span>Years of experience</span></h4>
+                                <h4>8<span>  {{ __('frontend.YearsOf') }}</span></h4>
                             </div>
                         </div>
-                        <a class="btn-animation border dark" href="#" data-animation="animated slideInUp">Discover More <i class="arrow_right"></i></a>
+                        <a class="btn-animation border dark" href="#happy" data-animation="animated slideInUp">{{ __('frontend.DiscoverMore') }} <i class="arrow_right"></i></a>
                     </div>
                 </div>
             </div>
@@ -187,16 +166,16 @@
             <div class="heading-left">
                 <div class="row">
                     <div class="col-lg-5">
-                        <h5>What we do</h5>
+                        <h5>{{ __('frontend.WhyLayanMedia') }}</h5>
                         <h2>
-                            Let’s Check our scientific <br> Digital solutions
+                            {{ __('frontend.LetsCheck') }}
                         </h2>
                     </div>
                     <div class="col-lg-6 offset-lg-1">
                         <p>
-                            Everything melancholy uncommonly but solicitude inhabiting projection off. Connection stimulated estimating excellence an to impression. ladies she basket season age her uneasy saw. Discourse unwilling am no described.
+                           {{ __('frontend.YouChoos') }}
                         </p>
-                        <a class="btn circle btn-md btn-theme effect" href="#">View All <i class="fas fa-angle-right"></i></a>
+                        <a class="btn circle btn-md btn-theme effect" href="{{route('services')}}">{{ __('frontend.DiscoverMore') }} <i class="fas fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -208,12 +187,12 @@
                     <div class="single-item col-lg-6 col-md-6">
                         <div class="item">
                             <div class="icon">
-                                <i class="flaticon-3d"></i>
+                                <i class="fab fa-codepen"></i>
                             </div>
                             <div class="info">
-                                <h4><a href="#">Digital Products</a></h4>
+                                <h4><a href="#"> {{ __('frontend.ExperienceProfessionalism') }}</a></h4>
                                 <p>
-                                   Preferred joy agreement put continual elsewhere delivered now. Mrs exercise felicity. Preferred joy agreement put continual elsewhere delivered now. Mrs exercise felicity for the perfects.
+                                     {{ __('frontend.ExperienceProfessionalismText') }}
                                 </p>
                             </div>
                         </div>
@@ -223,12 +202,27 @@
                     <div class="single-item col-lg-6 col-md-6">
                         <div class="item">
                             <div class="icon">
-                                <i class="flaticon-target"></i>
+                                <i class="fas fa-check"></i>
                             </div>
                             <div class="info">
-                                <h4><a href="#">Marketing Strategy</a></h4>
+                                <h4><a href="#">{{ __('frontend.CustomizedSolutions') }}</a></h4>
                                 <p>
-                                    Preferred joy agreement put continual elsewhere delivered now. Mrs exercise felicity. Preferred joy agreement put continual elsewhere delivered now. Mrs exercise felicity for the perfects.
+                                    {{ __('frontend.CustomizedSolutionsText') }}
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="single-item col-lg-6 col-md-6">
+                        <div class="item">
+                            <div class="icon">
+                               <i class="fas fa-address-card"></i>
+                            </div>
+                            <div class="info">
+                                <h4><a href="#">{{ __('frontend.AttentionDetails') }}</a></h4>
+                                <p>
+                                    {{ __('frontend.AttentionDetailsText') }}
                                 </p>
                             </div>
                         </div>
@@ -238,27 +232,12 @@
                     <div class="single-item col-lg-6 col-md-6">
                         <div class="item">
                             <div class="icon">
-                                <i class="flaticon-price-tag"></i>
+                               <i class="fas fa-search"></i>
                             </div>
                             <div class="info">
-                                <h4><a href="#">Digital branding</a></h4>
+                                <h4><a href="#">{{ __('frontend.AnalysisEvaluation') }}</a></h4>
                                 <p>
-                                    Preferred joy agreement put continual elsewhere delivered now. Mrs exercise felicity. Preferred joy agreement put continual elsewhere delivered now. Mrs exercise felicity for the perfects.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
-                    <div class="single-item col-lg-6 col-md-6">
-                        <div class="item">
-                            <div class="icon">
-                                <i class="flaticon-bullhorn"></i>
-                            </div>
-                            <div class="info">
-                                <h4><a href="#">Social Media</a></h4>
-                                <p>
-                                   Preferred joy agreement put continual elsewhere delivered now. Mrs exercise felicity. Preferred joy agreement put continual elsewhere delivered now. Mrs exercise felicity for the perfects.
+                                    {{ __('frontend.AnalysisEvaluationText') }}
                                 </p>
                             </div>
                         </div>
@@ -355,7 +334,8 @@
     <div class="pricing-area default-padding-bottom">
         <!-- Fixed Shape -->
         <div class="fixed-shape-bottom">
-            <img src="/front/img/shape/19.png" alt="Shape">
+            <img src="{{ asset('front/img/shape/19.png') }}" alt="Shape">
+
         </div>
         <!-- End Fixed Shape -->
         <div class="container">
@@ -376,7 +356,7 @@
                          <div class="col-lg-4 col-md-6 single-item">
                         <div class="pricing-item {{$key == 1 ? 'active' : ''}}">
                             <div class="pricing-header">
-                                <h4>{{$plan->title}}</h4>
+                                <h4>{{$plan->name}}</h4>
                                 <img class="img-fluid mb-3" height="35" src="{{asset('storage/' . $plan->img)}}" alt="{{$plan->title}}"/>
                                 <h2 class="mt-2"><sup>$</sup>{{$plan->price}} <sub>/ {{$plan->duration}}</sub></h2>
                             </div>
@@ -401,7 +381,7 @@
 
     <!-- Star Testimonials
     ============================================= -->
-    <div class="testimonials-area default-padding">
+    <div class="testimonials-area default-padding" id="happy">
         <div class="container">
             <div class="testimonial-items text-center">
                 <div class="row">
@@ -467,6 +447,9 @@
                                        <span>{{$blog->category->name}} </span>
                                    </li>
                                </ul>
+                            </div>
+                                <div class="icon">
+                                <a href="{{route('blogs.show' , $blog->slug)}}">  <img src="{{asset('storage/' . $blog->img) }}" alt="service "> </a>
                             </div>
                         </div>
                     </div>

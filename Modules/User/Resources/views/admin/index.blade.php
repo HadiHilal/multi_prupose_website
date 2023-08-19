@@ -253,8 +253,9 @@
 @endsection
 
 @section('js')
-    <script src="/admin/plugins/custom/datatables/datatables.bundle.js"></script>
-    <script src="/admin/js/custom/apps/user-management/users/list/table.js"></script>
+<script src="{{ asset('admin/plugins/custom/datatables/datatables.bundle.js') }}"></script>
+<script src="{{ asset('admin/js/custom/apps/user-management/users/list/table.js') }}"></script>
+
     <script>
          $(document).on('click', '#delete_selected', function(e) {
         e.preventDefault();

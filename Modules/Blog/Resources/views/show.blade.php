@@ -70,7 +70,7 @@
                             @if(!is_null($previous))
                             <a href="{{route('blogs.show' , $previous->slug)}}">
                                 <i class="fas fa-angle-double-left"></i> {{__('frontend.PreviousPost')}}
-                                   <h5>{{Str::limit($blog->title, 20)}}</h5>
+                                   <h5>{{Str::limit($previous->title, 30)}}</h5>
                             </a>
                             @else
                                 <a></a>
@@ -78,7 +78,7 @@
                             @if(!is_null($next))
                             <a href="{{route('blogs.show' , $next->slug)}}">
                               {{__('frontend.NextPost')}}  <i class="fas fa-angle-double-right"></i>
-                                <h5>{{Str::limit($blog->title, 20)}}</h5>
+                                <h5>{{Str::limit($next->title, 30)}}</h5>
                             </a>
                             @else
                                 <a></a>

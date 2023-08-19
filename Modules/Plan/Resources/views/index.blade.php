@@ -1,16 +1,18 @@
 @extends('layouts.app')
 @section('title' , __('frontend.OurPackages'))
-@section('description' ,$seo->get('about'))
-@section('keywords' , $seo->get('keywords'))
+@section('description' ,$seo->get('website_desc'))
+@section('keywords' , $seo->get('website_keywords'))
 @section('site-img' , asset('storage/' . $settings->get('meta_img')))
 
 @section('css')
     <style>
-       .pricing-area .pricing-header img {
-        height: 25px!important;
-        margin-top: 30px;
-        margin-bottom: 20px;
-    }
+ .pricing-area .pricing-header img {
+    height: 150px!important;
+    margin-top: 30px;
+    width: 150px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
     </style>
     @endsection
 @section('content')
@@ -42,7 +44,7 @@
                          <div class="col-lg-4 col-md-6 single-item">
                         <div class="pricing-item {{$key == 1 ? 'active' : ''}}">
                             <div class="pricing-header">
-                                <h4>{{$plan->title}}</h4>
+                                <h4>{{$plan->name}}</h4>
                                 <img class="img-fluid mb-3" height="35" src="{{asset('storage/' . $plan->img)}}" alt="{{$plan->title}}"/>
                                 <h2 class="mt-2"><sup>$</sup>{{$plan->price}} <sub>/ {{$plan->duration}}</sub></h2>
                             </div>

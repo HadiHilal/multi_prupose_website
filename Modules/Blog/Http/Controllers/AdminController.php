@@ -41,7 +41,7 @@ class AdminController extends Controller
     {
 
         $rules = [
-            'img' => 'required|image|mimes:jpeg,png,jpg|max:1048',
+            'img' => 'required|image|mimes:jpeg,png,jpg,webp|max:1048',
             'slug' => 'required',
             'title' => 'required',
             'intro' => 'required',
@@ -85,7 +85,7 @@ class AdminController extends Controller
     public function update(Request $request)
     {
           $rules = [
-            'img' => 'sometimes|image|mimes:jpeg,png,jpg|max:1048',
+            'img' => 'sometimes|image|mimes:jpeg,png,jpg,webp|max:1048',
             'title' => 'required',
             'intro' => 'required',
             'keywords' => 'required',
@@ -135,11 +135,18 @@ class AdminController extends Controller
         $blog->content = $request['content'];
         $blog->publish = $request->has('publish') ? 1 : 0;
         $blog->featured = $request->has('featured') ? 1 : 0;
+        $blog->service = $request->has('service') ? 1 : 0;
         $blog->save();
         if ($blog->publish){
             $subscripers = Subscriber::all();
+              if($blog->service){
+                  $url = route('services.show' ,$blog->slug) ;
+              }else{
+                  $url = route('blogs.show' ,$blog->slug) ;
+              }
+                            
             foreach ($subscripers as $subscriper){
-                $subscriper->notify(new NotifyUsersOfNewBlog($blog->title , $blog->intro , 'www.google.com'));
+                $subscriper->notify(new NotifyUsersOfNewBlog($blog->title , $blog->intro , $url));
             }
         }
         Cache::forget('blogs');

@@ -54,6 +54,57 @@ return [
     'ThankYou' => 'Thank You' ,
      'PreviousPost' => 'Previous Post',
      'NextPost' => 'Next Post',
-    'PageNotFound' => 'Sorry Page Was Not Found!'
+    'PageNotFound' => 'Sorry Page Was Not Found!' ,
+    'OurServices' => 'Our Services',
+    'Trust' => 'Proven track record of success, committed to providing the best services to achieve your goals' ,
+    'Working' => 'We work continuously to achieve success for our customers by providing many creative solutions to help them distinguish their field of work from their competitors',
+    'YearsOf' => 'Years of experience',
+    'WeOffer' => 'best servicese',
+    'FreeConsultations' => 'Free Consultations',
+     '24/16hourSupport' => '24/16 hour support teame',
+     'DiscoverMore'  => 'Discover More' ,
+     'WorldCustomer'  => 'World Customer' ,
+     'PositiveRating'  => 'Positive Rating' ,
+     'Contract'  => 'Contract' ,
+     'WhyLayanMedia'  => 'Why Layan Media' ,
+     'LetsCheck'  => 'Lets check why we choose to deal with Layan Media' ,
+     'YouChoos'  => 'You choose Layan Media because we care about the success of your project and strive to provide the best marketing solutions to achieve your business goals. Contact us now and let us help you build and enhance your digital presence in a successful and impactful way.' ,
+    'ExperienceProfessionalism' => 'Experience & Professionalism' ,
+     'ExperienceProfessionalismText' => ' Layan Media has extensive experience in the field of e-marketing and managing social media pages. With an experienced and professional team, it has the experience and skills necessary to implement successful marketing strategies' ,
+       
+    'CustomizedSolutions' => 'Customized solutions',
+    'CustomizedSolutionsText' => 'We provide customized and innovative solutions that fit your needs and project requirements. We understand your goals and work hard to achieve them.',
+    'AttentionDetails'  => 'Attention To Details' ,
+     'AttentionDetailsText'  => 'We care about the smallest details in every work we do. We are keen to provide high quality and creative content that attracts the attention of the audience.' ,
+     'AnalysisEvaluation' => 'Analysis & Evaluation',
+     'AnalysisEvaluationText' => 'We monitor and analyze the performance of our campaigns periodically, and we provide detailed reports to help you continue to improve the results of your project.',
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     ];
+ 

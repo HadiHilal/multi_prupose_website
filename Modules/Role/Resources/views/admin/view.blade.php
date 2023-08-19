@@ -375,12 +375,11 @@
 @endsection
 
 @section('js')
-    			<!--begin::Page Vendors Javascript(used by this page)-->
-		<script src="/admin/plugins/custom/datatables/datatables.bundle.js"></script>
-		<!--end::Page Vendors Javascript-->
-		<!--begin::Page Custom Javascript(used by this page)-->
-		<script src="/admin/js/custom/apps/user-management/roles/view/view.js"></script>
-		<script src="/admin/js/custom/apps/user-management/roles/view/update-role.js"></script>
+    <!--begin::Page Vendors Javascript(used by this page)-->
+    <script src="{{ asset('admin/plugins/custom/datatables/datatables.bundle.js') }}"></script>
+    <script src="{{ asset('admin/js/custom/apps/user-management/roles/view/view.js') }}"></script>
+    <script src="{{ asset('admin/js/custom/apps/user-management/roles/view/update-role.js') }}"></script>
+
 
     <script>
         $(document).on('click', '.delete-user', function(e) {

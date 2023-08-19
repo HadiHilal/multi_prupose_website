@@ -168,7 +168,8 @@
 @endsection
 
 @section('js')
-    <script src="/admin/plugins/custom/datatables/datatables.bundle.js"></script>
+<script src="{{ asset('admin/plugins/custom/datatables/datatables.bundle.js') }}"></script>
+
     <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
     <script>
         $(document).ready(function() {

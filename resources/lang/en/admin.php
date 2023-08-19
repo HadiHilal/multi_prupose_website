@@ -143,4 +143,6 @@ return [
     'SearchInBlog' => 'Search In Blogs' ,
     'SearchInPlans' => 'Search In Plans' ,
     'SearchInUsers' => 'Search In Users' ,
+    'Service' => 'Service' ,
+    'EditService' => 'Edit Service'
     ];

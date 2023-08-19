@@ -93,6 +93,7 @@
                          <th class="min-w-100px">{{__('admin.Category')}}</th>
                         <th class="min-w-100px">{{__('admin.Featured')}}</th>
                         <th class="min-w-100px">{{__('admin.Published')}}</th>
+                        <th class="min-w-100px">{{__('admin.Service')}}</th>
                         <th class="min-w-100px">{{__('admin.CreatedDate')}}</th>
                         <th class="min-w-100px"><i class="bi bi-eye"></i></th>
                         <th class="text-end min-w-100px"></th>
@@ -114,12 +115,21 @@
                             </a>
                         </td>
                           <td>
-                              <a href="{{$blog->publish ? route('blogs.show' ,$blog->slug) : '#'}}">
-                                 {{ Str::limit($blog->title, 38) }} <i class="bi bi-arrow-up-right-square mx-1"></i>
+
+                              @if($blog->service)
+                                          <a href="{{$blog->publish ? route('services.show' ,$blog->slug) : '#'}}">
+                                 {{ Str::limit($blog->title, 38) }} <i class="bi bi-arrow-up-right mx-1"></i>
+                                @else
+                                        <a href="{{$blog->publish ? route('blogs.show' ,$blog->slug) : '#'}}">
+                                 {{ Str::limit($blog->title, 38) }} <i class="bi bi-arrow-up-right mx-1"></i>
+                                @endif
+
+
+
                               </a>
                           </td>
 
-                                         <td>
+                          <td>
                           {{$blog->category->name}}
                         </td>
 
@@ -148,6 +158,17 @@
                             @endif
                         </td>
                         <!--end::Two step=-->
+                                    <td>
+                            <div class="badge badge-primary fw-bolder">
+                                @if($blog->service)
+
+                                     {{__('admin.Yes')}}
+                                @else
+                                    {{__('admin.No')}}
+                                @endif
+
+                            </div>
+                        </td>
                         <!--begin::Joined-->
                         <td>{{$blog->created_at->diffForHumans()}}</td>
                         <!--begin::Joined-->
@@ -198,7 +219,8 @@
 @endsection
 
 @section('js')
-<script src="/admin/plugins/custom/datatables/datatables.bundle.js"></script>
+<script src="{{ asset('admin/plugins/custom/datatables/datatables.bundle.js') }}"></script>
+
 <script>
   $(document).ready(function() {
     var table = $('#kt_table_blogs').DataTable({

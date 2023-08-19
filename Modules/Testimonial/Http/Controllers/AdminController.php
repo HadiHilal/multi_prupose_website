@@ -36,7 +36,7 @@ class AdminController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'img' => 'required|image|mimes:jpeg,png,jpg|max:1048',
+            'img' => 'required|image|mimes:jpeg,png,jpg,webp|max:1048',
             'name' => 'required',
             'position' => 'required',
             'comment' => 'required',
@@ -83,7 +83,7 @@ class AdminController extends Controller
         $id = $request->id;
          $testimonial = Testimonial::findOrFail($id);
            $rules = [
-            'img' => 'sometimes|image|mimes:jpeg,png,jpg|max:1048',
+            'img' => 'sometimes|image|mimes:jpeg,png,jpg,webp|max:1048',
             'name' => 'required',
             'position' => 'required',
             'comment' => 'required',

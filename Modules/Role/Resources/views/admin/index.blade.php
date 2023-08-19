@@ -83,7 +83,8 @@
                     <!--begin::Button-->
                     <button type="button" class="btn btn-clear d-flex flex-column flex-center" data-bs-toggle="modal" data-bs-target="#kt_modal_add_role">
                         <!--begin::Illustration-->
-                        <img src="/admin/media/illustrations/sketchy-1/4.png" alt="" class="mw-100 mh-150px mb-7" />
+                      <img src="{{ asset('admin/media/illustrations/sketchy-1/4.png') }}" alt="" class="mw-100 mh-150px mb-7" />
+
                         <!--end::Illustration-->
                         <!--begin::Label-->
                         <span class="fw-bolder fs-3 text-gray-600 text-hover-primary">{{__('admin.NewRole')}}</span>
@@ -228,5 +229,6 @@
 @endsection
 
 @section('js')
-    	<script src="/admin/js/custom/apps/user-management/roles/list/add.js"></script>
+    	<script src="{{ asset('admin/js/custom/apps/user-management/roles/list/add.js') }}"></script>
+
 @endsection

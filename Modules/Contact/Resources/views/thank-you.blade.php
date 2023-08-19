@@ -1,14 +1,14 @@
 @extends('layouts.app')
 @section('title' , __('frontend.ThankYou'))
-@section('description' ,$seo->get('about'))
-@section('keywords' , $seo->get('keywords'))
+@section('description' ,$seo->get('website_desc'))
+@section('keywords' , $seo->get('website_keywords'))
 @section('site-img' , asset('storage/' . $settings->get('meta_img')))
 
 @section('content')
 
         <!-- Start Breadcrumb
     ============================================= -->
-    <div class="breadcrumb-area shadow dark bg-cover text-center text-light" style="background-image: url({{asset('storage/' . $settings->get('contact_us_bg'))}});">
+    <div class="breadcrumb-area shadow dark bg-cover text-center text-light" style="background-image: url({{asset('storage/' . $settings->get('thanks_bg'))}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">

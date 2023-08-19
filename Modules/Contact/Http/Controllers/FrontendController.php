@@ -38,7 +38,7 @@ class FrontendController extends  Controller
             'email'  => 'nullable|email' ,
             'phone'  => 'required' ,
             'subject' => 'nullable|min:5',
-            'message' => 'required|min:15',
+            'message' => 'required|min:10',
         ]);
         $contact = new Contact();
         $contact->name = $request->name;

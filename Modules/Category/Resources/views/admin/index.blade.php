@@ -227,7 +227,8 @@
 
 @section('js')
 
-    <script src="/admin/plugins/custom/datatables/datatables.bundle.js"></script>
+   <script src="{{ asset('admin/plugins/custom/datatables/datatables.bundle.js') }}"></script>
+
     <script>
         $(document).ready(function() {
           $('#kt_categories_table').DataTable({

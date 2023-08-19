@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title' , __('frontend.ContactUs'))
-@section('description' ,$seo->get('about'))
-@section('keywords' , $seo->get('keywords'))
+@section('description' ,$seo->get('website_desc'))
+@section('keywords' , $seo->get('website_keywords'))
 @section('site-img' , asset('storage/' . $settings->get('meta_img')))
 
 @section('content')
@@ -31,7 +31,8 @@
             <div class="contact-items">
                 <!-- Fixed BG -->
                 <div class="fixed-bg left">
-                    <img src="/front/img/shape/39.png" alt="Shape">
+                   <img src="{{ asset('front/img/shape/39.png') }}" alt="Shape">
+
                 </div>
                 <!-- Fixed BG -->
                 <div class="row align-center">

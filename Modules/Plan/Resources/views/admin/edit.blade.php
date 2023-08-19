@@ -3,7 +3,8 @@
 @section('title' , __('admin.EditPlan'))
 
 @section('css')
-     <link href="/admin/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('admin/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css"/>
+
 @endsection
 @section('toolbar')
 
@@ -59,7 +60,7 @@
                     </div>
                     <!--end::Col-->
                        <div class="col-xl-9 fv-row">
-                                                  <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/admin/media/avatars/blank.png')">
+                                                  <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/public/admin/media/avatars/blank.png')">
                             <!--begin::Preview existing avatar-->
                             <div class="image-input-wrapper w-125px h-125px bgi-position-center" style="background-size: 75%; background-image: url('{{asset('storage/' . $plan->img)}}')"></div>
                             <!--end::Preview existing avatar-->
@@ -210,7 +211,8 @@
 @endsection
 
 @section('js')
-     <script src="/admin/plugins/global/plugins.bundle.js"></script>
+   <script src="{{ asset('admin/plugins/global/plugins.bundle.js') }}"></script>
+
     <script>
    $(document).ready(function() {
         var featureContainer = $('.feature-container').first().clone();

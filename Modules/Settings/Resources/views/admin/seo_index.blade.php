@@ -104,7 +104,7 @@
                             <!--end::Col-->
                             <!--begin::Col-->
                             <div class="col-xl-9 fv-row">
-                                <input type="text" class="form-control form-control-solid" name="data[main_title]" placeholder="Boots your website traffic today " />
+                                <input type="text" class="form-control form-control-solid" name="data[main_title]" value="{{$seo->get('main_title')}}" placeholder="Boots your website traffic today " />
                             </div>
                         </div>
 

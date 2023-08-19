@@ -3,7 +3,8 @@
 @section('title' , __('admin.EditBlog'))
 
 @section('css')
-    <link href="/admin/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css"/>
+   <link href="{{ asset('admin/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css"/>
+
 @endsection
 @section('toolbar')
 
@@ -59,7 +60,7 @@
                     </div>
                     <!--end::Col-->
                        <div class="col-xl-9 fv-row">
-                                                  <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/admin/media/avatars/blank.png')">
+                                                  <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/public/admin/media/avatars/blank.png')">
                             <!--begin::Preview existing avatar-->
                             <div class="image-input-wrapper w-125px h-125px bgi-position-center" style="background-size: 75%; background-image: url({{asset('storage/' . $blog->img)}})"></div>
                             <!--end::Preview existing avatar-->
@@ -204,6 +205,22 @@
                                 </div>
                          </div>
 
+                     <div class="row mb-8">
+                                <!--begin::Col-->
+                                <div class="col-xl-3">
+                                    <div class="fs-6 fw-bold mt-2 mb-3">{{__('admin.Service')}}</div>
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-xl-9 fv-row">
+                                         <div class="form-check form-switch form-check-custom form-check-solid me-10">
+                                                <input class="form-check-input h-30px w-50px"  {{$blog->service == 1 ? 'checked' : ''}}  type="checkbox" name="service" id="flexSwitch30x50"/>
+                                            </div>
+                                    <div class="fv-plugins-message-container invalid-feedback">
+                                     <x-input-error class="mt-2" :messages="$errors->get('service')" />
+                                </div>
+                                </div>
+                         </div>
 
                      </div>
 
@@ -219,7 +236,8 @@
 @endsection
 
 @section('js')
-    <script src="/admin/plugins/global/plugins.bundle.js"></script>
+   <script src="{{ asset('admin/plugins/global/plugins.bundle.js') }}"></script>
+
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tinymce/tinymce-jquery@1/dist/tinymce-jquery.min.js"></script>
 

@@ -58,7 +58,7 @@ return [
     'AnErrorOccurred' => 'حدث خطأ' ,
     'Delete' => 'حذف' ,
     'View' => 'عرض' ,
-    'EditRole' => 'تحرير الدور' ,
+    'EditRole' => 'تعديل الدور' ,
     'WebsiteWhiteLogo' => 'Website White Logo' ,
     'WebsiteBlackLogo' => 'Website Black Logo' ,
     'MetaImg' => 'Meta Image' ,
@@ -107,10 +107,10 @@ return [
     'Category' => ' التصنيف',
     'Blogs' => 'المدونات',
     'AddNewCategory' => 'إضافة تصنيف جديدة',
-    'EditCategory' => 'تحرير التصنيف',
+    'EditCategory' => 'تعديل التصنيف',
     'QuickLinks' => 'روابط سريعة',
     'AddNewBlog' => 'أضف مدونة جديدة',
-    'EditBlog' => 'تحرير المدونة',
+    'EditBlog' => 'تعديل المدونة',
     'BlogLink' => 'رابط المدونة',
     'TheSlugShouldBeEnglish' => 'The Slug Should Be English Capitals',
     'BlogTitle' => 'عنوان المدونة',
@@ -143,5 +143,7 @@ return [
     'SearchInBlog' => 'بحث في المدونات' ,
     'SearchInPlans' => 'البحث في الخطط' ,
     'SearchInUsers' => 'بحث في المستخدمين' ,
+     'Service' => 'خدمات' ,
+    'EditService' => 'تعديل الخدمة'
 
     ];

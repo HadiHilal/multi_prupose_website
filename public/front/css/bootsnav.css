@@ -377,7 +377,7 @@ nav.navbar .quote-btn a {
   display: inline-block;
   font-size: 12px;
   font-weight: 600;
-  border: 2px solid #f35a38;
+  border: 2px solid #1d9075;
   text-transform: uppercase;
   top: -2px;
   letter-spacing: 0.6px;
@@ -411,7 +411,7 @@ nav.bootsnav.navbar-sidebar.bg-dark ul.nav li.dropdown h6 {
 }
 
 .attr-nav ul.cart-list li.total a {
-  background: #f35a38 none repeat scroll 0 0;
+  background: #1d9075 none repeat scroll 0 0;
   display: inline-block;
   font-weight: 600 !important;
   padding: 12px 15px;
@@ -419,7 +419,7 @@ nav.bootsnav.navbar-sidebar.bg-dark ul.nav li.dropdown h6 {
 }
 
 .attr-nav ul.cart-list li.total a:hover {
-  background: #f35a38 none repeat scroll 0 0 !important;
+  background: #1d9075 none repeat scroll 0 0 !important;
   color: #ffffff !important;
 }
 
@@ -728,7 +728,7 @@ nav.navbar.attr-border .attr-nav::before {
 }
 
 .attr-nav > ul > li > a span.badge {
-  background-color: #f35a38;
+  background-color: #1d9075;
   color: #ffffff;
   height: 20px;
   line-height: 20px;
@@ -1012,7 +1012,7 @@ body.on-side .body-overlay {
 }
 
 .navbar .side .widget li a:hover {
-  color: #f35a38;
+  color: #1d9075;
 }
 
 nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:hover::after {
@@ -1115,7 +1115,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle::after {
   display: inline-block;
   font-size: 30px;
   margin-right: 15px;
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .side .widget.address ul li p {
@@ -1169,7 +1169,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle::after {
   border: none;
   background: #ffffff;
   border-radius: 5px;
-  color: #f35a38;
+  color: #1d9075;
   font-size: 30px;
 }
 
@@ -1210,7 +1210,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle::after {
 }
 
 .side .widget ul.link li a {
-  color: #f35a38;
+  color: #1d9075;
   display: block;
   font-weight: bold;
   letter-spacing: 1px;
@@ -1255,7 +1255,7 @@ nav.navbar.bootsnav .share ul > li > a {
 }
 
 nav.navbar.bootsnav .share.dark ul > li > a {
-  background-color: #f35a38;
+  background-color: #1d9075;
   color: #ffffff;
 }
 
@@ -1264,7 +1264,7 @@ nav.navbar.bootsnav.color-yellow .share.dark ul > li > a {
 }
 
 nav.navbar.bootsnav .share ul > li > a:hover {
-  color: #f35a38;
+  color: #1d9075;
 }
 
 nav.navbar.bootsnav.color-yellow .share ul > li > a:hover {
@@ -1445,7 +1445,7 @@ nav.navbar.bootsnav {
   }
 
   nav.navbar.bootsnav ul.nav > li > a.active {
-    color: #f35a38;
+    color: #1d9075;
   }
 
   .blue nav.navbar.bootsnav ul.nav > li > a.active {
@@ -1453,7 +1453,7 @@ nav.navbar.bootsnav {
   }
 
   nav.navbar.bootsnav.active-bg ul.nav > li > a.active {
-    background: #f35a38 !important;
+    background: #1d9075 !important;
   }
 
   nav.navbar.bootsnav.active-border ul.nav > li > a.active {
@@ -1468,7 +1468,7 @@ nav.navbar.bootsnav {
     content: "";
     height: 0px;
     width: 80%;
-    border-bottom: 3px solid #f35a38;
+    border-bottom: 3px solid #1d9075;
   }
 
   nav.navbar.bootsnav.small-pad ul.nav > li > a {
@@ -1501,7 +1501,7 @@ nav.navbar.bootsnav {
   }
 
   nav.navbar.bootsnav ul.nav > li.active > a {
-    color: #f35a38;
+    color: #1d9075;
     background: #ecf6fa !important;
     border-radius: 30px;
   }
@@ -1519,7 +1519,7 @@ nav.navbar.bootsnav {
   }
 
   nav.bootsnav.navbar-sidebar ul.nav > li.active > a i {
-    background: #f35a38;
+    background: #1d9075;
     color: #ffffff;
   }
 
@@ -1533,7 +1533,7 @@ nav.navbar.bootsnav {
 
   nav.navbar.bootsnav.active-full ul.nav > li > a.active,
   nav.navbar.bootsnav.active-full ul.nav > li > a:hover {
-    background: #f35a38 none repeat scroll 0 0 !important;
+    background: #1d9075 none repeat scroll 0 0 !important;
     color: #ffffff;
   }
 
@@ -1547,7 +1547,7 @@ nav.navbar.bootsnav {
   }
 
   nav.navbar.bootsnav ul.nav > li > a:hover {
-    color: #f35a38;
+    color: #1d9075;
   }
 
   nav.navbar.bootsnav.color-yellow ul.nav > li > a:hover {
@@ -1629,7 +1629,7 @@ nav.navbar.bootsnav {
   }
 
   nav.navbar.bootsnav ul.navbar-right li.dropdown ul.dropdown-menu li a:hover {
-    color: #f35a38;
+    color: #1d9075;
   }
 
   nav.navbar.bootsnav.color-yellow
@@ -1642,7 +1642,7 @@ nav.navbar.bootsnav {
   }
 
   nav.navbar.bootsnav ul.navbar-left li.dropdown ul.dropdown-menu li a:hover {
-    color: #f35a38;
+    color: #1d9075;
   }
 
   nav.navbar.bootsnav.color-yellow
@@ -1773,7 +1773,7 @@ nav.navbar.bootsnav {
     ul.menu-col
     li
     a:hover {
-    color: #f35a38;
+    color: #1d9075;
   }
 
   nav.navbar.bootsnav.color-yellow
@@ -2073,7 +2073,7 @@ nav.navbar.bootsnav {
   }
 
   nav.bootsnav.navbar-sidebar ul.nav > li > a:hover {
-    color: #f35a38;
+    color: #1d9075;
   }
 
   nav.bootsnav.navbar-sidebar.color-yellow ul.nav > li > a:hover {
@@ -2397,7 +2397,7 @@ nav.navbar.bootsnav {
 
   nav.navbar.bootsnav ul.nav li.dropdown > ul.dropdown-menu li:hover > a {
     background-color: transparent !important;
-    color: #f35a38 !important;
+    color: #1d9075 !important;
   }
 
   nav.navbar.bootsnav.color-yellow
@@ -2943,7 +2943,7 @@ nav.navbar-transparent .attr-nav > ul > li.contact {
   font-size: 25px;
   position: relative;
   float: left;
-  color: #f35a38;
+  color: #1d9075;
   top: 3px;
 }
 
@@ -2960,7 +2960,7 @@ nav.navbar-transparent .attr-nav > ul > li.contact i {
   padding: 4px 0 4px 10px !important;
   font-size: 18px;
   text-transform: capitalize;
-  color: #f35a38;
+  color: #1d9075;
 }
 
 .attr-nav > ul.link > li > a i {
@@ -2988,7 +2988,7 @@ nav.navbar-transparent .attr-nav > ul > li.contact i {
 }
 
 .attr-nav.menu li:last-child a {
-  background: #f35a38 none repeat scroll 0 0;
+  background: #1d9075 none repeat scroll 0 0;
   border-radius: 30px;
   color: #ffffff !important;
   padding: 5px 20px !important;

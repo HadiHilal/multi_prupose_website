@@ -58,7 +58,7 @@
                     <div class="col-xl-3">
                         <div class="fs-6 fw-bold mt-2 mb-5">{{__('admin.WebsiteWhiteLogo')}}</div>
                         <!--begin::Image input-->
-                        <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/admin/media/avatars/blank.png')">
+                        <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/public/admin/media/avatars/blank.png')">
                             <!--begin::Preview existing avatar-->
                             <div class="image-input-wrapper w-125px h-125px bgi-position-center" style="background-size: 75%; background-image: url('{{asset('storage/' .$settings->get('white_logo'))}}')"></div>
                             <!--end::Preview existing avatar-->
@@ -93,7 +93,7 @@
                     <div class="col-xl-3">
                           <div class="fs-6 fw-bold mt-2 mb-5">{{__('admin.WebsiteBlackLogo')}}</div>
                         <!--begin::Image input-->
-                        <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/admin/media/avatars/blank.png')">
+                        <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/public/admin/media/avatars/blank.png')">
                             <!--begin::Preview existing avatar-->
                             <div class="image-input-wrapper w-125px h-125px bgi-position-center" style="background-size: 75%; background-image: url('{{asset('storage/' .$settings->get('black_logo'))}}')"></div>
                             <!--end::Preview existing avatar-->
@@ -128,7 +128,7 @@
                     <div class="col-xl-3">
                          <div class="fs-6 fw-bold mt-2 mb-5">{{__('admin.SlideImg')}}</div>
                         <!--begin::Image input-->
-                        <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/admin/media/avatars/blank.png')">
+                        <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/public/admin/media/avatars/blank.png')">
                             <!--begin::Preview existing avatar-->
                             <div class="image-input-wrapper w-125px h-125px bgi-position-center" style="background-size: 75%; background-image: url('{{asset('storage/' .$settings->get('slide_img'))}}')"></div>
                             <!--end::Preview existing avatar-->
@@ -163,7 +163,7 @@
                     <div class="col-xl-3">
                          <div class="fs-6 fw-bold mt-2 mb-5">{{__('admin.MetaImg')}}</div>
                         <!--begin::Image input-->
-                        <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/admin/media/avatars/blank.png')">
+                        <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/public/admin/media/avatars/blank.png')">
                             <!--begin::Preview existing avatar-->
                             <div class="image-input-wrapper w-125px h-125px bgi-position-center" style="background-size: 75%; background-image: url('{{asset('storage/' .$settings->get('meta_img'))}}')"></div>
                             <!--end::Preview existing avatar-->
@@ -198,7 +198,7 @@
                     <div class="col-xl-3">
                          <div class="fs-6 fw-bold mt-2 mb-5">Blog Page Background</div>
                         <!--begin::Image input-->
-                        <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/admin/media/avatars/blank.png')">
+                        <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/public/admin/media/avatars/blank.png')">
                             <!--begin::Preview existing avatar-->
                             <div class="image-input-wrapper w-125px h-125px bgi-position-center" style="background-size: 75%; background-image: url('{{asset('storage/' .$settings->get('blog_bg'))}}')"></div>
                             <!--end::Preview existing avatar-->
@@ -233,7 +233,7 @@
                     <div class="col-xl-3">
                          <div class="fs-6 fw-bold mt-2 mb-5">Contact Page Background</div>
                         <!--begin::Image input-->
-                        <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/admin/media/avatars/blank.png')">
+                        <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/public/admin/media/avatars/blank.png')">
                             <!--begin::Preview existing avatar-->
                             <div class="image-input-wrapper w-125px h-125px bgi-position-center" style="background-size: 75%; background-image: url('{{asset('storage/' .$settings->get('contact_us_bg'))}}')"></div>
                             <!--end::Preview existing avatar-->
@@ -268,7 +268,7 @@
                     <div class="col-xl-3">
                          <div class="fs-6 fw-bold mt-2 mb-5">Pricing Page Background</div>
                         <!--begin::Image input-->
-                        <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/admin/media/avatars/blank.png')">
+                        <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/public/admin/media/avatars/blank.png')">
                             <!--begin::Preview existing avatar-->
                             <div class="image-input-wrapper w-125px h-125px bgi-position-center" style="background-size: 75%; background-image: url('{{asset('storage/' .$settings->get('pricing_bg'))}}')"></div>
                             <!--end::Preview existing avatar-->
@@ -299,6 +299,75 @@
                     </div>
                     <!--end::Col-->
 
+                      <!--begin::Col-->
+                    <div class="col-xl-3">
+                         <div class="fs-6 fw-bold mt-2 mb-5">Thanks Page Background</div>
+                        <!--begin::Image input-->
+                        <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/public/admin/media/avatars/blank.png')">
+                            <!--begin::Preview existing avatar-->
+                            <div class="image-input-wrapper w-125px h-125px bgi-position-center" style="background-size: 75%; background-image: url('{{asset('storage/' .$settings->get('thanks_bg'))}}')"></div>
+                            <!--end::Preview existing avatar-->
+                            <!--begin::Label-->
+                            <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-white shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
+                                <i class="bi bi-pencil-fill fs-7"></i>
+                                <!--begin::Inputs-->
+                                <input type="file" name="imgs[thanks_bg]" accept=".png, .jpg, .jpeg" />
+                                <input type="hidden" name="avatar_remove" />
+                                <!--end::Inputs-->
+                            </label>
+                            <!--end::Label-->
+                            <!--begin::Cancel-->
+                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-white shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
+                                <i class="bi bi-x fs-2"></i>
+                            </span>
+                            <!--end::Cancel-->
+                            <!--begin::Remove-->
+                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-white shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                                <i class="bi bi-x fs-2"></i>
+                            </span>
+                            <!--end::Remove-->
+                        </div>
+                        <!--end::Image input-->
+                        <!--begin::Hint-->
+                        <div class="form-text"> 2440px * 1600px </div>
+                        <!--end::Hint-->
+                    </div>
+                    <!--end::Col-->
+
+                         <!--begin::Col-->
+                    <div class="col-xl-3">
+                         <div class="fs-6 fw-bold mt-2 mb-5">Services Page Background</div>
+                        <!--begin::Image input-->
+                        <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/public/admin/media/avatars/blank.png')">
+                            <!--begin::Preview existing avatar-->
+                            <div class="image-input-wrapper w-125px h-125px bgi-position-center" style="background-size: 75%; background-image: url('{{asset('storage/' .$settings->get('services_bg'))}}')"></div>
+                            <!--end::Preview existing avatar-->
+                            <!--begin::Label-->
+                            <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-white shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
+                                <i class="bi bi-pencil-fill fs-7"></i>
+                                <!--begin::Inputs-->
+                                <input type="file" name="imgs[services_bg]" accept=".png, .jpg, .jpeg" />
+                                <input type="hidden" name="avatar_remove" />
+                                <!--end::Inputs-->
+                            </label>
+                            <!--end::Label-->
+                            <!--begin::Cancel-->
+                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-white shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
+                                <i class="bi bi-x fs-2"></i>
+                            </span>
+                            <!--end::Cancel-->
+                            <!--begin::Remove-->
+                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-white shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                                <i class="bi bi-x fs-2"></i>
+                            </span>
+                            <!--end::Remove-->
+                        </div>
+                        <!--end::Image input-->
+                        <!--begin::Hint-->
+                        <div class="form-text"> 2440px * 1600px </div>
+                        <!--end::Hint-->
+                    </div>
+                    <!--end::Col-->
 
                 </div>
                 <!--end::Row-->
@@ -353,7 +422,7 @@
                     <!--end::Col-->
                     <!--begin::Col-->
                     <div class="col-xl-9 fv-row">
-                        <textarea name="data[header_scripts]" class="form-control form-control-solid h-100px">{{$settings->get('header_scripts')}}</textarea>
+                        <textarea name="data[header_scripts]" class="form-control form-control-solid ">{{$settings->get('header_scripts')}}</textarea>
                     </div>
                     <!--begin::Col-->
                 </div>
@@ -368,7 +437,7 @@
                     <!--end::Col-->
                     <!--begin::Col-->
                     <div class="col-xl-9 fv-row">
-                        <textarea name="data[body_scripts]" class="form-control form-control-solid h-100px">{{$settings->get('body_scripts')}}</textarea>
+                        <textarea name="data[body_scripts]" class="form-control form-control-solid ">{{$settings->get('body_scripts')}}</textarea>
                     </div>
                     <!--begin::Col-->
                 </div>
@@ -444,5 +513,6 @@
 @endsection
 
 @section('script')
-		<script src="/admin/js/custom/pages/projects/settings/settings.js"></script>
+	<script src="{{ asset('admin/js/custom/pages/projects/settings/settings.js') }}"></script>
+
 @endsection

@@ -11,19 +11,19 @@ Author: Hadi Hilal
         <meta name="csrf-token" content="{{ csrf_token() }}" />
         <meta name="robots" content="noindex">
 
-		<link rel="shortcut icon" href="/admin/media/logos/favicon.ico" />
+		<link rel="shortcut icon" href="{{asset('admin/media/logos/favicon.ico') }}" />
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 		<!--end::Fonts-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.0/font/bootstrap-icons.min.css" integrity="sha512-vDQXRXKXpBHSJMOkJqqzWhgcAcaG3Bab87wklsuBuYOanSnZ3y76EJj1CpMxPW8o5A5PW7ScywzKC2G4BJN53A=="
               crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<!--begin::Global Stylesheets Bundle(used by all pages)-->
-		<link href="/admin/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="{{asset('admin/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
 
 
 		<!--end::Global Stylesheets Bundle-->
         @if(LaravelLocalization::getCurrentLocaleDirection()  === 'rtl')
-            <link href="/admin/css/style.bundle.rtl.css" rel="stylesheet" type="text/css" />
+            <link href="{{asset('admin/css/style.bundle.rtl.css') }}" rel="stylesheet" type="text/css" />
                 <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@ Author: Hadi Hilal
                 }
             </style>
         @else
-            <link href="/admin/css/style.bundle.css" rel="stylesheet" type="text/css" />
+            <link href="{{asset('admin/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
 
         @endif
         <style>
@@ -112,7 +112,7 @@ Author: Hadi Hilal
 							<!--begin::Mobile logo-->
 							<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
 								<a href="#" class="d-lg-none">
-									<img alt="Logo" src="/admin/media/logos/logo-2.svg" class="h-30px" />
+									<img alt="Logo" src="admin/media/logos/logo-2.svg" class="h-30px" />
 								</a>
 							</div>
 							<!--end::Mobile logo-->
@@ -158,7 +158,7 @@ Author: Hadi Hilal
 											<!--begin::Menu-->
 											<div class="menu menu-sub menu-sub-dropdown menu-column w-250px w-lg-325px" data-kt-menu="true">
 												<!--begin::Heading-->
-												<div class="d-flex flex-column flex-center bgi-no-repeat rounded-top px-9 py-7" style="background-image:url('/admin/media/misc/pattern-1.jpg')">
+												<div class="d-flex flex-column flex-center bgi-no-repeat rounded-top px-9 py-7" style="background-image:url('admin/media/misc/pattern-1.jpg')">
 													<!--begin::Title-->
 													<h3 class="text-gray-800 fw-bold mb-1">{{__('admin.QuickLinks')}}</h3>
 													<!--end::Title-->
@@ -279,7 +279,7 @@ Author: Hadi Hilal
 													<a href="#" class="menu-link px-5">
 														<span class="menu-title position-relative"> {{__('admin.Languages')}}
 														<span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">{{LaravelLocalization::getCurrentLocaleName()}}
-														<img class="w-15px h-15px rounded-1 ms-2" src="/admin/media/flags/{{ LaravelLocalization::getCurrentLocale()  === 'ar' ? 'saudi-arabia.svg':'united-states.svg'}} " alt="" /></span></span>
+														<img class="w-15px h-15px rounded-1 ms-2" src="admin/media/flags/{{ LaravelLocalization::getCurrentLocale()  === 'ar' ? 'saudi-arabia.svg':'united-states.svg'}} " alt="" /></span></span>
 													</a>
 													<!--begin::Menu sub-->
 													<div class="menu-sub menu-sub-dropdown w-175px py-4">
@@ -401,18 +401,18 @@ Author: Hadi Hilal
 		<!--end::Root-->
 
 		<!--end::Main-->
-		<script>var hostUrl = "/admin/";</script>
+		<!--<script>var hostUrl = "https://layanmedia.comadmin/";</script>-->
 		<!--begin::Javascript-->
 		<!--begin::Global Javascript Bundle(used by all pages)-->
-		<script src="/admin/plugins/global/plugins.bundle.js"></script>
-		<script src="/admin/js/scripts.bundle.js"></script>
+		<script src="{{asset('admin/plugins/global/plugins.bundle.js')}}"></script>
+		<script src="{{asset('admin/js/scripts.bundle.js')}}"></script>
 		<!--end::Global Javascript Bundle-->
           @yield('js')
 		<!--begin::Page Custom Javascript(used by this page)-->
-		<script src="/admin/js/custom/widgets.js"></script>
-		<script src="/admin/js/custom/apps/chat/chat.js"></script>
-		<script src="/admin/js/custom/modals/create-app.js"></script>
-		<script src="/admin/js/custom/modals/upgrade-plan.js"></script>
+		<!--<script src="admin/js/custom/widgets.js"></script>-->
+		<!--<script src="admin/js/custom/apps/chat/chat.js"></script>-->
+		<!--<script src="admin/js/custom/modals/create-app.js"></script>-->
+		<!--<script src="admin/js/custom/modals/upgrade-plan.js"></script>-->
 		<!--end::Page Custom Javascript-->
 		<!--end::Javascript-->
 

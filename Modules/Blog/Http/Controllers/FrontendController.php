@@ -25,28 +25,26 @@ class FrontendController extends Controller
             Cache::put('seo' , $seo);
         }
         $index_blogs = 'active';
-        $blogs   = Blog::with('category')->where('publish' , 1)->orderByDesc('created_at')->paginate(30);
+        $blogs   = Blog::with('category')->where('publish' , 1)->where('service' , 0)->orderByDesc('created_at')->paginate(30);
         return view('blog::index' , compact('settings' , 'seo' , 'index_blogs' , 'blogs' ));
 
     }
 
     public function show($slug){
          $index_blogs = 'active';
-         $blog = Blog::where('slug' , $slug)->where('publish' , 1)->first();
+         $blog = Blog::where('slug' , $slug)->where('publish' , 1)->where('service' , 0)->first();
          if (is_null($blog)){
              abort(404);
          }
-         $previous = Blog::where('id' , '<', $blog->id)->select('title' , 'slug')->where('publish' , 1)->first();
-         $next = Blog::where('id' , '>', $blog->id)->select('title' , 'slug')->where('publish' , 1)->first();
+         $previous = Blog::where('id' , '<', $blog->id)->where('categorey_id' , $blog->categorey_id)->select('title' , 'slug')->where('publish' , 1)->first();
+         $next = Blog::where('id' , '>', $blog->id)->where('categorey_id' , $blog->categorey_id)->select('title' , 'slug')->where('publish' , 1)->first();
          $settings = Cache::get('settings');
         if (!$settings){
             $settings   = Settings::all()->pluck('value' , 'key');
             Cache::put('settings' , $settings);
         }
 
-
         $check_user = BlogView::where('ip' , request()->ip())->where('blog_id' , $blog->id)->first();
-
         if (is_null($check_user)) {
             $view = new BlogView();
             $view->ip = request()->ip();
