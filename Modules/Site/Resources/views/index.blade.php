@@ -47,8 +47,8 @@
                                 <div class="col-lg-6 thumb multi-items">
                                     <div class="thumb-box">
                                         <img class="wow fadeInDown" src="{{asset('storage/' . $settings->get('slide_img')) ?? '/public/front/img/illustration/dashboard.png'}}" alt="Dashbaord">
-                                        <img class="wow fadeInUp" data-wow-delay="300ms" src="/public/front/img/illustration/man-1.png" alt="illustration">
-                                        <img class="wow fadeInUp" data-wow-delay="800ms" src="/public/front/img/illustration/man-2.png" alt="illustration">
+                                        <img class="wow fadeInUp" data-wow-delay="300ms" src="{{asset('front/img/illustration/man-1.png')}}" alt="illustration1">
+                                        <img class="wow fadeInUp" data-wow-delay="800ms" src="{{asset('front/img/illustration/man-2.png')}}" alt="illustration2">
                                     </div>
                                 </div>
                             </div>

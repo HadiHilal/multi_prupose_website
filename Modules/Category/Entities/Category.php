@@ -11,7 +11,7 @@ class Category extends Model
     use HasFactory;
     use HasTranslations;
     public $translatable = ['name'];
-    protected $fillable = [];
+    protected $fillable = ['name'];
 
     protected static function newFactory()
     {

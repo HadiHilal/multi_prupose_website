@@ -29,13 +29,9 @@ class AppServiceProvider extends ServiceProvider
 //
 //            \URL::forceScheme('https');
 
-
-
         $settings = Cache::rememberForever('settings', function () {
             return Settings::all()->pluck('value', 'key');
         });
-
-
 
         view()->composer('layouts.app', function ($view) use ($settings) {
             $view->with([
